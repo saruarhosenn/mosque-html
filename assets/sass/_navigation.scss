@@ -1,0 +1,101 @@
+.main-header {
+  &__inner {
+    padding: 25px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    &__link {
+      display: inline-block;
+      position: relative;
+      font-family: $mosque-heading-font;
+      font-size: 30px;
+      color: $mosque-primary;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+  }
+
+  &__nav {
+    @include device(lg) {
+      display: none;
+    }
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      li {
+        a {
+          font-size: 16px;
+          color: $mosque-white;
+          font-weight: 400;
+          text-transform: uppercase;
+          line-height: 1.375;
+          transition: all 500ms ease;
+
+          &:hover {
+            color: $mosque-primary;
+          }
+        }
+      }
+    }
+  }
+
+  &__nav-btn {
+    width: 26px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    cursor: pointer;
+    z-index: 3;
+
+    @include devices(xl) {
+      display: none;
+    }
+
+    span {
+      width: 100%;
+      height: 2px;
+      background-color: $mosque-white;
+      transition: all 500ms ease;
+
+      &:nth-child(2) {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+
+    &:hover span {
+      background-color: $mosque-primary;
+    }
+  }
+}
+
+.sticky-header--cloned {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  top: 0;
+  background-color: $mosque-white;
+  transform: translateY(-100%);
+  box-shadow: 0px 3px 18px rgba($mosque-black-rgb, 0.07);
+  transition: .6s cubic-bezier(.24, .74, .58, 1);
+  visibility: hidden;
+  transition: transform 500ms ease, visibility 500ms ease;
+
+  &.active {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}

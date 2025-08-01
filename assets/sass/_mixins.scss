@@ -1,0 +1,296 @@
+@mixin devices ($breakpoint) {
+	@if $breakpoint==sm {
+		@media (min-width: 576px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==md {
+		@media (min-width: 768px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==lg {
+		@media (min-width: 992px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==xl {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==xxl {
+		@media (min-width: 1400px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==xxxl {
+		@media (min-width: 1600px) {
+			@content;
+		}
+	}
+}
+
+@mixin device ($breakpoint) {
+	@if $breakpoint==xxxl {
+		@media (max-width: 1799px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==xxl {
+		@media (max-width: 1599px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==xl {
+		@media (max-width: 1399px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==lg {
+		@media (max-width: 1199px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==md {
+		@media (max-width: 991px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==sm {
+		@media (max-width: 767px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==xsm {
+		@media (max-width: 575px) {
+			@content;
+		}
+	}
+}
+
+@mixin positionFull {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+@mixin positionCenter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin shine {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba($mosque-white-rgb, 0) 0%, rgba($mosque-white-rgb, 0.2) 100%);
+	background: linear-gradient(to right, rgba($mosque-white-rgb, 0) 0%, rgba($mosque-white-rgb, 0.2) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+
+	@-webkit-keyframes shine {
+		100% {
+			left: 125%;
+		}
+	}
+
+	@keyframes shine {
+		100% {
+			left: 125%;
+		}
+	}
+}
+
+@mixin shineHover {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+
+@mixin bg($position, $size) {
+	background-repeat: no-repeat;
+	background-position: $position;
+	background-size: $size;
+}
+
+@mixin bgScale($bgColor, $scale: 0, $radius: 50%, $time: 400ms) {
+	content: "";
+	width: 100%;
+	height: 100%;
+	border-radius: $radius;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transform: scale($scale);
+	opacity: 0;
+	background-color: $bgColor;
+	transition: transform $time ease, opacity $time ease;
+}
+
+@mixin bgMoveY($bgColor, $radius: 50%, $time: 500ms) {
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: $bgColor;
+	border-radius: $radius;
+	z-index: -1;
+	transition: all $time ease;
+}
+
+@mixin woobbleHover {
+	-webkit-animation-name: wobble-horizontal-hover;
+	animation-name: wobble-horizontal-hover;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+@mixin flipInY {
+	-webkit-animation-name: flipInY;
+	animation-name: flipInY;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+@mixin flipInX {
+	-webkit-animation-name: flipInX;
+	animation-name: flipInX;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+@mixin flip {
+	-webkit-animation-name: flip;
+	animation-name: flip;
+	-webkit-animation-duration: 1.2s;
+	animation-duration: 1.2s;
+	-webkit-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+@mixin bounce {
+	-webkit-animation-name: bounce;
+	animation-name: bounce;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+@mixin bounceY {
+	-webkit-animation-name: bounceY;
+	animation-name: bounceY;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+@mixin animatedBG($bgColor, $duration) {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 150%;
+	height: 150%;
+	background-color: $bgColor;
+	transition-duration: $duration;
+	transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+@mixin reset-ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+@mixin reset-btn {
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+
+@mixin slideImage {
+	width: auto !important;
+	display: inline-block !important;
+	max-width: 100%;
+	height: auto;
+}
+
+@mixin borderHover {
+	background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+	transition: all 500ms ease;
+
+	&:hover {
+		background-size: 100% 1px;
+	}
+}
+
+@function toRGB ($color) {
+	@return red($color)+", "+green($color)+", "+blue($color);
+}
+
+@mixin svgMask($svg, $repeat: no-repeat, $position: top center, $size: auto) {
+	-webkit-mask: url('data:image/svg+xml;utf8,#{$svg}');
+	mask: url('data:image/svg+xml;utf8,#{$svg}');
+	-webkit-mask-repeat: $repeat;
+	mask-repeat: $repeat;
+	-webkit-mask-position: $position;
+	mask-position: $position;
+	-webkit-mask-size: $size;
+	mask-size: $size;
+}
+
+@mixin iconSvg() {
+	svg {
+		width: 1em;
+		height: 1em;
+		fill: currentColor;
+	}
+}

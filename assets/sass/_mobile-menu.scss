@@ -1,0 +1,175 @@
+.mobile-menu-overlay {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    transform: translateX(-100%);
+    transform-origin: left center;
+    visibility: hidden;
+    transition: transform 500ms ease 500ms, visibility 500ms ease 500ms;
+}
+
+.mobile-menu-overlay.active {
+    transform: translateX(0%);
+    visibility: visible;
+    transition: transform 500ms ease 0ms, visibility 500ms ease 0ms;
+}
+
+.mobile-menu {
+
+    &__wrapper {
+        width: 320px;
+        height: 100%;
+        padding: 90px 15px 30px;
+        background-color: $mosque-black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+        transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, transform 500ms ease 0ms;
+        z-index: 9999;
+        overflow-y: auto;
+        overflow-y: scroll;
+        /* hide scrollbar but allow scrolling */
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+
+        &::-webkit-scrollbar {
+            display: none;
+            /* for Chrome, Safari, and Opera */
+        }
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+            transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms, transform 500ms ease 500ms;
+        }
+    }
+
+    &__close {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 16px;
+        color: $mosque-white;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        border-radius: 2px;
+        background-color: $mosque-primary;
+        transition: all 500ms ease;
+
+        &:hover {
+            color: $mosque-primary;
+            background-color: $mosque-white;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 50px;
+    }
+
+    &__main {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+
+            a {
+                display: block;
+                padding: 12px 0;
+                font-family: $mosque-font;
+                font-size: 16px;
+                color: $mosque-white;
+                line-height: 1.5;
+                text-transform: capitalize;
+                border-bottom: 1px solid RGBA($mosque-white-rgb, 0.1);
+                transition: all 500ms ease;
+
+                &:hover {
+                    color: $mosque-primary;
+                }
+            }
+        }
+    }
+
+    &__info {
+        margin-top: 40px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        font-size: 23px;
+        color: $mosque-white;
+        font-weight: 700;
+        text-transform: capitalize;
+        line-height: 1.5;
+    }
+
+    &__contact {
+        margin-bottom: 40px;
+
+        &__list {
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 16px;
+                color: $mosque-white;
+                font-weight: 500;
+
+                +li {
+                    margin-top: 15px;
+                }
+
+                a {
+                    color: inherit;
+
+                    &:hover {
+                        color: $mosque-primary;
+                    }
+                }
+            }
+        }
+
+        &__icon {
+            width: 33px;
+            height: 33px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            font-size: 14px;
+            color: $mosque-white;
+            text-align: center;
+            background-color: $mosque-primary;
+        }
+    }
+
+    .social-links {
+        a {
+            width: 33px;
+            height: 33px;
+        }
+
+        &__icon {
+            font-size: 14px;
+        }
+    }
+}
