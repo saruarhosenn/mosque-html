@@ -1,27 +1,58 @@
-<header class="main-header sticky-header sticky-header--normal">
-    <div class="container">
-        <div class="main-header__inner">
-            <div class="main-header__logo logo-retina">
-                <a href="index.html" class="main-header__logo__link">&lt;/smai&gt;</a>
-            </div><!-- /.main-header__logo -->
-            <nav class="main-header__nav">
-                <ul class="main-header__nav__list">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul><!-- /.main-header__nav__list -->
-            </nav><!-- /.main-header__nav -->
-            <div class="main-header__nav-btn mobile-menu-toggler">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div><!-- /.main-header__nav-btn -->
-            <i class="fas fa-yin-yang"></i>
-        </div><!-- /.main-header__inner -->
-    </div><!-- /.container -->
-</header><!-- /.main-header -->
+<header class="header">
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar__inner">
+                <ul class="topbar__contact list-unstyled">
+                    <li>
+                        <span class="topbar__contact__icon"><i class="icon-telephone"></i></span>
+                        <div><a href="tel:+8801518457245">+8801518457245</a></div>
+                    </li>
+                    <li>
+                        <span class="topbar__contact__icon"><i class="icon-envelope"></i></span>
+                        <div><a href="mailto:mdparvezsarkarlevel1@gmail.com">mdparvezsarkarlevel1@gmail.com</a></div>
+                    </li>
+                </ul><!-- /.topbar__contact -->
+                <div class="topbar__info">
+                    <div class="topbar__social">
+                        <p class="topbar__social__title">আমাদের অনুসরণ করুন!</p>
+                        <div class="topbar__social__box">
+                            @@include("components/__social-links.html")
+                        </div><!-- /.topbar__social__box -->
+                    </div><!-- /.topbar__social -->
+                </div><!-- /.topbar__info -->
+            </div><!-- /.topbar__inner -->
+        </div><!-- /.container -->
+    </div><!-- /.topbar -->
+    <div class="main-header sticky-header sticky-header--normal">
+        <div class="container">
+            <div class="main-header__inner">
+                <div class="main-header__logo logo-retina">
+                    <a href="index.html">
+                        <img src="assets/images/logo-light-6.png" alt="logo" width="149">
+                    </a>
+                </div><!-- /.main-header__logo -->
+                <nav class="main-header__nav">
+                    <ul class="main-header__nav__list list-unstyled">
+                        <li><a href="#">হোম</a></li>
+                        <li><a href="#">আমাদের সম্পর্কে</a></li>
+                        <li><a href="#">চলমান প্রজেক্ট</a></li>
+                        <li><a href="#">গ্যালারী</a></li>
+                        <li><a href="#">সংবাদ</a></li>
+                        <li><a href="#">যোগাযোগ</a></li>
+                    </ul><!-- /.main-header__nav__list -->
+                </nav><!-- /.main-header__nav -->
+                <div class="main-header__right">
+                    <div class="main-header__nav-btn mobile-menu-toggler">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div><!-- /.main-header__nav-btn -->
+                    <a href="#" class="main-header__user">
+                        <i class="icon-user"></i>
+                    </a><!-- /.main-header__user -->
+                    <a href="#" class="mosque-btn mosque-btn--secondary">দান করুন</a><!-- /.mosque-btn -->
+                </div><!-- /.main-header__right -->
+            </div><!-- /.main-header__inner -->
+        </div><!-- /.container -->
+    </div><!-- /.main-header -->
+</header><!-- /.header -->

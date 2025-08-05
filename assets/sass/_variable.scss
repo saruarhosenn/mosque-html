@@ -1,6 +1,6 @@
 :root {
 	--mosque-font: "Noto Serif Bengali", serif;
-	--mosque-font-2: "Lato", sans-serif;
+	--mosque-font-2: "Lato", sans-serif; // for english text
 	--mosque-heading-font: "Hind Siliguri", sans-serif;
 	--mosque-text: #7C7F87;
 	--mosque-text-rgb: #{toRGB(#7C7F87)};
@@ -14,10 +14,10 @@
 	--mosque-white2-rgb: #{toRGB(#F3F5F4)};
 	--mosque-black: #08050D;
 	--mosque-black-rgb: #{toRGB(#08050D)};
-	--mosque-black2: #24243557;
-	--mosque-black2-rgb: #{toRGB(#24243557)};
-	--mosque-black3: #242435;
-	--mosque-black3-rgb: #{toRGB(#242435)};
+	--mosque-black2: #000000;
+	--mosque-black2-rgb: #{toRGB(#000000)};
+	--mosque-black3: #0f1115;
+	--mosque-black3-rgb: #{toRGB(#0f1115)};
 	--mosque-border-color: #DBD8E6;
 	--mosque-border-color-rgb: #{toRGB(#DBD8E6)};
 	--body-size: 18px;

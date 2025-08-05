@@ -7,6 +7,7 @@
     padding-top: 220px;
     padding-bottom: 220px;
     overflow: hidden;
+    background-color: $mosque-black;
 
     // &::after {
     //     content: "";
@@ -53,7 +54,7 @@
     &__name {
         margin-bottom: 20px;
         font-size: $heading-size-1;
-        color: $mosque-black;
+        color: $mosque-white;
         font-weight: 800;
         text-transform: capitalize;
         line-height: 1.25;

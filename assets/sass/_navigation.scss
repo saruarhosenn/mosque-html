@@ -1,21 +1,148 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+}
+
+.topbar {
+  position: relative;
+  z-index: 999;
+  padding: 10px 0px;
+  overflow: hidden;
+  background-color: $mosque-primary;
+
+  @include device(lg) {
+    padding: 15px 0px;
+  }
+
+  @include device(sm) {
+    display: none;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__contact {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    z-index: 1;
+    margin: 0px;
+
+    @include device(lg) {
+      width: 100%;
+      justify-content: center;
+    }
+
+    &::before {
+      content: "";
+      width: 1000px;
+      height: calc(100% + 40px);
+      position: absolute;
+      top: 50%;
+      right: -138px;
+      z-index: -1;
+      transform: translateY(-50%);
+      background: linear-gradient(90deg, #007d3a 0%, #e7b619 100%);
+      clip-path: polygon(0 0, 100% 0, 94.5% 100%, 0 100%);
+
+      @include device(lg) {
+        width: calc(100% + 500px);
+        top: 50%;
+        right: auto;
+        left: 50%;
+        clip-path: none;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &__icon {
+      display: inline-flex;
+      flex-shrink: 0;
+      font-size: 18px;
+      color: $mosque-white;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: $mosque-font-2;
+      font-size: 16px;
+      color: $mosque-white;
+      font-weight: 400;
+      line-height: 1.25;
+
+      a {
+        color: inherit;
+        @include borderHover;
+      }
+    }
+  }
+
+  &__info {
+    @include device(lg) {
+      display: none;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    &__title {
+      margin: 0px;
+      color: $mosque-white;
+    }
+
+    &__box {
+      display: flex;
+      align-items: center;
+
+      a {
+        flex-shrink: 0;
+        position: relative;
+        font-size: 18px;
+        color: $mosque-white;
+        transition: all 500ms ease;
+
+        &:not(:last-child)::after {
+          content: "|";
+          position: relative;
+          top: -1px;
+          margin-left: 15px;
+          margin-right: 15px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
 .main-header {
   &__inner {
-    padding: 25px 0px;
+    padding: 30px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   &__logo {
-    &__link {
+    a {
       display: inline-block;
-      position: relative;
-      font-family: $mosque-heading-font;
-      font-size: 30px;
-      color: $mosque-primary;
-      font-weight: 700;
-      text-transform: uppercase;
-      line-height: 1;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
     }
   }
 
@@ -25,20 +152,22 @@
     }
 
     &__list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+      margin: 0px;
       display: flex;
       align-items: center;
-      gap: 40px;
+
+      li + li {
+        margin-left: 40px;
+      }
 
       li {
         a {
-          font-size: 16px;
+          display: inline-block;
+          font-size: 18px;
+          font-weight: 500;
           color: $mosque-white;
-          font-weight: 400;
-          text-transform: uppercase;
           line-height: 1.375;
+          text-transform: capitalize;
           transition: all 500ms ease;
 
           &:hover {
@@ -49,14 +178,20 @@
     }
   }
 
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
   &__nav-btn {
-    width: 26px;
+    width: 30px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-shrink: 0;
     cursor: pointer;
-    z-index: 3;
+    z-index: 1;
 
     @include devices(xl) {
       display: none;
@@ -69,13 +204,68 @@
       transition: all 500ms ease;
 
       &:nth-child(2) {
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-top: 6px;
+        margin-bottom: 6px;
       }
     }
 
     &:hover span {
       background-color: $mosque-primary;
+    }
+  }
+
+  &__user {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    font-size: 20px;
+    color: $mosque-black;
+    border-radius: 50%;
+    background-color: $mosque-white;
+    transition: all 500ms ease;
+
+    @include device(lg) {
+      margin-left: 50px;
+    }
+
+    @media (max-width: 440px) {
+      margin-left: 40px;
+    }
+
+    &:hover {
+      color: $mosque-white;
+      background-color: $mosque-primary;
+    }
+
+    &::before {
+      content: "";
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: -25px;
+      transform: translateY(-50%);
+      background-color: rgba($mosque-white-rgb, 0.3);
+
+      @media (max-width: 440px) {
+        left: -20px;
+      }
+
+      @include devices(xl) {
+        display: none;
+      }
+    }
+  }
+
+  .mosque-btn {
+    margin-left: 30px;
+
+    @include device(sm) {
+      display: none;
     }
   }
 }
@@ -87,15 +277,45 @@
   right: 0;
   z-index: 999;
   top: 0;
-  background-color: $mosque-white;
-  transform: translateY(-100%);
-  box-shadow: 0px 3px 18px rgba($mosque-black-rgb, 0.07);
-  transition: .6s cubic-bezier(.24, .74, .58, 1);
   visibility: hidden;
+  transform: translateY(-100%);
+  background-color: $mosque-white;
+  box-shadow: 0px 3px 18px rgba($mosque-black-rgb, 0.07);
+  transition: 0.6s cubic-bezier(0.24, 0.74, 0.58, 1);
   transition: transform 500ms ease, visibility 500ms ease;
 
   &.active {
     transform: translateY(0%);
     visibility: visible;
+  }
+
+  .main-header__nav__list li a {
+    color: $mosque-black;
+
+    &:hover {
+      color: $mosque-primary;
+    }
+  }
+
+  .main-header__nav-btn span {
+    background-color: $mosque-black;
+  }
+
+  .main-header__nav-btn:hover span {
+    background-color: $mosque-primary;
+  }
+
+  .main-header__user {
+    color: $mosque-black;
+    background-color: $mosque-secondary;
+
+    &:hover {
+      color: $mosque-white;
+      background-color: $mosque-primary;
+    }
+
+    &::before {
+      background-color: rgba($mosque-black-rgb, 0.2);
+    }
   }
 }
