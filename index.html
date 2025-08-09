@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mosque || Personal Portfolio HTML Template</title>
+    <title>Home One || জৈনপুর জামে মসজিদ</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
     <link rel="manifest" href="assets/images/favicons/site.webmanifest">
-    <meta name="description" content="" />
+    <meta name="description" content="জৈনপুর জামে মসজিদ আমাদের এলাকার ঐতিহাসিক ও আধ্যাত্মিক কেন্দ্র। এটি নামাজ, ধর্মীয় শিক্ষা ও সামাজিক সেবার মাধ্যমে সম্প্রদায়ের ঐক্য ও কল্যাণে নিবেদিত একটি সৎ, অলাভজনক প্রতিষ্ঠান।" />
     <!-- fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,12 +61,12 @@
                 <div class="topbar__info">
                     <div class="topbar__social">
                         <p class="topbar__social__title">আমাদের অনুসরণ করুন!</p>
-                        <div class="topbar__social__box">
-                            <a href="https://www.facebook.com"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-<a href="https://www.instagram.com"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-<a href="https://www.linkedin.com"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-<a href="https://www.youtube.com"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                        </div><!-- /.topbar__social__box -->
+                        <ul class="topbar__social__list list-unstyled">
+                            <li><a href="https://www.facebook.com"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.instagram.com"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.linkedin.com"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.youtube.com"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                        </ul><!-- /.topbar__social__box -->
                     </div><!-- /.topbar__social -->
                 </div><!-- /.topbar__info -->
             </div><!-- /.topbar__inner -->
@@ -153,24 +153,91 @@
     </div><!-- /.mobile-menu__wrapper -->
 </div><!-- /.mobile-menu -->
 
-<section class="hero-one">
-    <div class="container">
-        <div class="row gutter-y-60 align-items-center">
-            <div class="col-lg-6">
-                <div class="hero-one__content">
-                    <h1 class="hero-one__name">আল্লাহ তাদের সাহায্য করেন যারা নিজেদের সাহায্য করে।</h1><!-- /.hero-one__name -->
-                    <p class="hero-one__text">জৈনপুর জামে মসজিদ হলো আমাদের এলাকায় অন্যতম ঐতিহাসিক ও গুরুত্বপূর্ণ ধর্মীয় স্থান। এটি আমাদের সমাজের কেন্দ্রবিন্দু হিসেবে মুসলিম সম্প্রদায়ের আধ্যাত্মিক ও সামাজিক জীবনের অংশ হয়েছে। মসজিদটি শুধু নামাজ আদায়ের স্থান নয়, বরং এটি শিক্ষা, সেবা ও শান্তির কেন্দ্র হিসেবেও প্রতিষ্ঠিত। আমাদের মসজিদটি নিয়মিতভাবে ধর্মীয় ক্লাসের আয়োজন করে এবং বিভিন্ন ধর্মীয় অনুষ্ঠানেরও আয়োজন করা হয়, যা সমাজের সকল বয়সের মানুষের জন্য একটি বিশেষ দিক। মসজিদ পরিচালনা কমিটি একটি সৎ, মুনাফাহীন একটি প্রতিষ্ঠান, যার একমাত্র লক্ষ্য আল্লাহর রাযা। একে অপরের প্রতি সহানুভূতি বৃদ্ধি করার মাধ্যম। জয়নপুর জামে মসজিদ সমাজের কল্যাণ ও উন্নয়নে গুরুত্বপূর্ণ ভূমিকা পালন করে যাচ্ছে। আল্লাহ্‌ সকলের জন্য মঙ্গল করুন, এবং আমাদের দোয়ায় সব সময় সকলকে রাখুন জয়নপুর।</p><!-- /.hero-one__text -->
-                    <a href="#contact" class="mosque-btn"><span>সাহায্য করুন</span></a><!-- /.mosque-btn -->
-                </div><!-- /.hero-one__content -->
-            </div><!-- /.col-lg-6 -->
-            <div class="col-lg-6">
-                <div class="hero-one__image">
-                    <img src="assets/images/hero/mosque.png" alt="mosque">
-                </div><!-- /.hero-one__image -->
-            </div><!-- /.col-lg-6 -->
-        </div><!-- /.row gutter-y-60 -->
-    </div><!-- /.container -->
-</section><!-- /.hero-one -->
+<section class="hero-slider">
+    <div class="hero-slider__carousel mosque-owl__carousel mosque-owl__carousel--basic-nav owl-carousel owl-theme"
+        data-owl-options='{
+        "items": 1,
+        "margin": 0,
+        "animateIn": "fadeIn",
+        "animateOut": "fadeOut",
+        "loop": true,
+        "smartSpeed": 700,
+        "nav": true,
+        "dots": false,
+        "autoplay": true,
+        "navText": ["<i class=\"icon-arrow-left-up\"></i>","<i class=\"icon-arrow-right-down\"></i>"]
+    }'>
+        <div class="hero-slider__item">
+            <div class="hero-slider__bg" style="background-image: url(assets/images/background/hero-slider-bg-1.jpg);"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 mx-xl-auto">
+                        <div class="hero-slider__content">
+                            <h2 class="hero-slider__title"><span class="hero-slider__title__inner">যে ব্যক্তি কারো দুনিয়ার কোনো বিপদ দূর করবে, মহান আল্লাহ তাকে কিয়ামতের দিনের বিপদ থেকে রক্ষা করবেন।</span></h2>
+                            <div class="hero-slider__description">
+                                <p class="hero-slider__text">(সুনান তিরমিযী, হাদীস ২৯৪৫)</p>
+                            </div><!-- /.hero-slider__description -->
+                            <div class="hero-slider__button">
+                                <div class="hero-slider__button__inner">
+                                    <a href="#" class="mosque-btn">দান করুন</a><!-- /.mosque-btn -->
+                                </div>
+                                <div class="hero-slider__button__inner">
+                                    <a href="#" class="mosque-btn">আমাদের কার্যক্রম</a><!-- /.mosque-btn -->
+                                </div>
+                            </div><!-- /.hero-slider__button -->
+                        </div><!-- /.hero-slider__content -->
+                    </div><!-- /.col-xl-8 ms-xxl-auto -->
+                </div><!-- /.row gutter-y-40 -->
+            </div><!-- /.container -->
+        </div><!-- /.hero-slider__item -->
+        <div class="hero-slider__item">
+            <div class="hero-slider__bg" style="background-image: url(assets/images/background/hero-slider-bg-2.jpg);"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 mx-xl-auto">
+                        <div class="hero-slider__content">
+                            <h2 class="hero-slider__title"><span class="hero-slider__title__inner">আল্লাহর কাছে সর্বাধিক প্রিয় আমল হলো, যা সদাসর্বদা নিয়মিত করা হয়, যদিও তা অল্প হয়।</span></h2>
+                            <div class="hero-slider__description">
+                                <p class="hero-slider__text">(সহীহ বুখারী, হাদীস ৬৪৬৪)</p>
+                            </div><!-- /.hero-slider__description -->
+                            <div class="hero-slider__button">
+                                <div class="hero-slider__button__inner">
+                                    <a href="#" class="mosque-btn">দান করুন</a><!-- /.mosque-btn -->
+                                </div>
+                                <div class="hero-slider__button__inner">
+                                    <a href="#" class="mosque-btn">আমাদের কার্যক্রম</a><!-- /.mosque-btn -->
+                                </div>
+                            </div><!-- /.hero-slider__button -->
+                        </div><!-- /.hero-slider__content -->
+                    </div><!-- /.col-xl-8 ms-xxl-auto -->
+                </div><!-- /.row gutter-y-40 -->
+            </div><!-- /.container -->
+        </div><!-- /.hero-slider__item -->
+        <div class="hero-slider__item">
+            <div class="hero-slider__bg" style="background-image: url(assets/images/background/hero-slider-bg-3.jpg);"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 mx-xl-auto">
+                        <div class="hero-slider__content">
+                            <h2 class="hero-slider__title"><span class="hero-slider__title__inner">অবশ্যই আল্লাহ পছন্দ করেন যে, তোমাদের কেউ কোনো কাজ করলে সে যেন তা নৈপুণ্যের সাথে করে।</span></h2>
+                            <div class="hero-slider__description">
+                                <p class="hero-slider__text">(মুসনাদ আবি ইয়ালা, হাদীস ৪৩৮৬)</p>
+                            </div><!-- /.hero-slider__description -->
+                            <div class="hero-slider__button">
+                                <div class="hero-slider__button__inner">
+                                    <a href="#" class="mosque-btn">দান করুন</a><!-- /.mosque-btn -->
+                                </div>
+                                <div class="hero-slider__button__inner">
+                                    <a href="#" class="mosque-btn">আমাদের কার্যক্রম</a><!-- /.mosque-btn -->
+                                </div>
+                            </div><!-- /.hero-slider__button -->
+                        </div><!-- /.hero-slider__content -->
+                    </div><!-- /.col-xl-8 ms-xxl-auto -->
+                </div><!-- /.row gutter-y-40 -->
+            </div><!-- /.container -->
+        </div><!-- /.hero-slider__item -->
+    </div><!-- /.hero-slider__carousel -->
+</section><!-- /.hero-slider -->
 
 
 

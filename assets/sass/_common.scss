@@ -445,33 +445,27 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
 
     button {
       border: none;
       outline: none;
       margin: 0;
       padding: 0;
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-shrink: 0;
-      font-size: 9px;
+      font-size: 14px;
       color: $mosque-black;
-      background-color: RGBA($mosque-black-rgb, 0.1);
       border-radius: 50%;
-      transition: all 400ms ease;
-
-      @include device(xsm) {
-        width: 50px;
-        height: 50px;
-        font-size: 8px;
-      }
+      background-color: $mosque-white2;
+      transition: all 500ms ease;
 
       &:hover {
-        color: $mosque-black;
+        color: $mosque-white;
         background-color: $mosque-primary;
       }
 
@@ -497,7 +491,7 @@ p {
       height: 8px;
       border-radius: 50%;
       background-color: RGBA($mosque-black-rgb, 0.1);
-      transition: all 400ms ease;
+      transition: all 500ms ease;
 
       span {
         background-color: transparent;

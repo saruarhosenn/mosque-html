@@ -1,0 +1,195 @@
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: $mosque-black2;
+
+  &__carousel {
+    position: relative;
+
+    &.owl-carousel {
+      position: relative;
+
+      .owl-nav {
+        margin: 0;
+        position: absolute;
+
+        @include device(lg) {
+          left: 50%;
+          bottom: 60px;
+          transform: translateX(-50%);
+        }
+
+        @media (min-width: 1200px) {
+          top: 50%;
+          left: 35px;
+          transform: translateY(-50%);
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+
+        @media (min-width: 1400px) {
+          left: 50px;
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-top: 322px;
+    padding-bottom: 210px;
+    overflow: hidden;
+    background-color: $mosque-black2;
+
+    @include device(xl) {
+      padding-top: 282px;
+      padding-bottom: 170px;
+    }
+
+    @include device(lg) {
+      padding-bottom: 270px;
+    }
+
+    @include device(md) {
+      padding-top: 257px;
+      padding-bottom: 250px;
+    }
+
+    @include device(sm) {
+      padding-top: 200px;
+    }
+
+    @include device(xsm) {
+      padding-top: 180px;
+      padding-bottom: 230px;
+    }
+  }
+
+  &__bg {
+    position: relative;
+    @include positionFull;
+    @include bg(top center, cover);
+    transform: scale(1);
+    transition: transform 8s ease;
+
+    &::after {
+      content: "";
+      @include positionFull;
+      background-color: RGBA($mosque-black-rgb, 0.8);
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: $heading-size-1;
+    color: $mosque-white;
+    font-weight: 700;
+    line-height: 1.375;
+    overflow: hidden;
+
+    @include device(xl) {
+      font-size: 60px;
+    }
+
+    @include device(md) {
+      font-size: 45px;
+    }
+
+    @include device(xsm) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 440px) {
+      font-size: 35px;
+    }
+
+    @media (max-width: 390px) {
+      font-size: 30px;
+    }
+
+    &__inner {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+
+  &__description {
+    overflow: hidden;
+  }
+
+  &__text {
+    margin-bottom: 45px;
+    font-size: 20px;
+    color: $mosque-white;
+    opacity: 0;
+    transform: translateY(100%);
+
+    @include device(md) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 390px) {
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow: hidden;
+
+    &__inner {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+
+  .active {
+    .hero-slider__bg {
+      transform: scale(1);
+    }
+
+    .hero-slider__title__inner,
+    .hero-slider__text,
+    .hero-slider__button__inner {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-slider__title__inner {
+      transition: transform 1300ms ease, opacity 1300ms ease;
+    }
+
+    .hero-slider__text,
+    .hero-slider__button__inner {
+      transition: transform 800ms ease, opacity 800ms ease;
+    }
+
+    .hero-slider__text {
+      transition-delay: 800ms;
+    }
+
+    .hero-slider__button__inner:nth-child(1) {
+      transition-delay: 1100ms;
+    }
+
+    .hero-slider__button__inner:nth-child(2) {
+      transition-delay: 1200ms;
+    }
+  }
+}

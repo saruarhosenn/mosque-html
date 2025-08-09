@@ -154,26 +154,6 @@
         });
       });
     }
-    let mosqueowlCarouselCustomDots = $(".mosque-owl__carousel--custom-dots");
-    if (mosqueowlCarouselCustomDots.length) {
-      mosqueowlCarouselCustomDots.each(function () {
-        let elm = $(this);
-        let mosqueowlCarouselThumb = elm.data("thumb-elm");
-        $(mosqueowlCarouselThumb).each(function () {
-          let self = $(this);
-          self.find(".owl-dot").on("click", function () {
-            elm.trigger("to.owl.carousel", [$(this).index(), 300]);
-          });
-        });
-        elm.on("changed.owl.carousel", function (element) {
-          $(mosqueowlCarouselThumb).each(function () {
-            let self = $(this);
-            self.find(".owl-dot").removeClass("active");
-            self.find(".owl-dot").eq(element.item.index).addClass("active");
-          });
-        });
-      });
-    }
   }
 
   // cirle text
