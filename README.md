@@ -1,11 +1,5 @@
-# HTML Starter Pack
+# জৈনপুর জামে মসজিদ
 
-Hi, This is a starter boilerplate for an HTML template.
+জৈনপুর জামে মসজিদ ইসলামিক সেন্টার একটি প্রাণবন্ত ও আন্তরিক কমিউনিটি কেন্দ্র, যা মুসলিমদের আত্মিক উন্নতি, সমাজে সম্পৃক্ততা এবং সাংস্কৃতিক সমৃদ্ধির জন্য একটি কেন্দ্রবিন্দু হিসেবে কাজ করে।
 
-## Installation
-
-### Requirements
-
-It requires the following dependencies:
-
-- [Node.js](https://nodejs.org/)
+- [Live Link](https://saruarhosenn.github.io/mosque-html/)
