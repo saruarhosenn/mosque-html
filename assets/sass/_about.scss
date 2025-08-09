@@ -1,0 +1,75 @@
+.about-us {
+  background-color: $mosque-white;
+
+  &__image {
+    position: relative;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    &__two {
+      display: inline-block;
+      position: absolute;
+      right: 20px;
+      bottom: -51px;
+
+      @media (max-width: 575px) {
+        display: none;
+      }
+
+      @media (min-width: 576px) and (max-width: 767px) {
+        right: -10px;
+      }
+
+      @media (min-width: 768px) and (max-width: 991px) {
+        right: 50px;
+      }
+
+      @media (min-width: 992px) and (max-width: 1199px) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    @media (min-width: 576px) and (max-width: 991px) {
+      margin-top: 70px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    margin: 0px;
+
+    li + li {
+      margin-top: 15px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-family: $mosque-heading-font;
+      font-size: 20px;
+      font-weight: 700;
+      color: $mosque-black;
+    }
+
+    &__shape {
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      position: relative;
+      top: -2px;
+      transform: rotate(47.395deg);
+      flex-shrink: 0;
+      background-color: $mosque-primary;
+    }
+  }
+}

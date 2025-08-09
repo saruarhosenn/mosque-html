@@ -132,7 +132,7 @@
   &__text {
     margin-bottom: 45px;
     font-size: 20px;
-    color: $mosque-white;
+    color: $mosque-secondary;
     opacity: 0;
     transform: translateY(100%);
 
@@ -161,7 +161,7 @@
 
   .active {
     .hero-slider__bg {
-      transform: scale(1);
+      transform: scale(1.2);
     }
 
     .hero-slider__title__inner,
