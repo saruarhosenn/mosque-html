@@ -1,0 +1,106 @@
+.donate {
+  background-color: $mosque-white2;
+
+  &__top {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    margin: 0px;
+  }
+
+  &__custom-navs {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+
+    button {
+      border: none;
+      outline: none;
+      margin: 0;
+      padding: 0;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      font-size: 14px;
+      color: $mosque-black;
+      border-radius: 50%;
+      background-color: $mosque-white;
+      transition: all 500ms ease;
+
+      &:hover {
+        color: $mosque-white;
+        background-color: $mosque-primary;
+      }
+
+      span {
+        border: none;
+        outline: none;
+        color: inherit;
+      }
+    }
+  }
+
+  &__carousel {
+    .owl-stage {
+      display: flex;
+    }
+
+    .item,
+    .donate__card {
+      height: 100%;
+    }
+  }
+
+  &__card {
+    text-align: center;
+    border-radius: 20px;
+    background-color: $mosque-white;
+
+    &__image {
+      display: block;
+      border-radius: 20px 20px 0px 0px;
+
+      img {
+        width: 100%;
+        display: block;
+        border-radius: inherit;
+      }
+    }
+
+    &__content {
+      padding: 21px 30px 30px;
+
+      @media (max-width: 390px) {
+        padding: 21px 25px 25px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-transform: capitalize;
+
+      a {
+        color: inherit;
+
+        &:hover {
+          color: $mosque-primary;
+        }
+
+        @include borderHover;
+      }
+    }
+
+    &__text {
+      margin-bottom: 30px;
+    }
+  }
+}

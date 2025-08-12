@@ -1744,6 +1744,9 @@ h6 {
     left: 50px;
   }
 }
+.hero-slider__carousel.owl-carousel .owl-nav button {
+  background-color: var(--mosque-white);
+}
 .hero-slider__item {
   position: relative;
   padding-top: 322px;
@@ -1976,6 +1979,102 @@ h6 {
   transform: rotate(47.395deg);
   flex-shrink: 0;
   background-color: var(--mosque-primary);
+}
+
+/*--------------------------------------------------------------
+# Donate
+--------------------------------------------------------------*/
+.donate {
+  background-color: var(--mosque-white2);
+}
+.donate__top {
+  margin-bottom: 40px;
+}
+.donate .section-title {
+  margin: 0px;
+}
+.donate__custom-navs {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.donate__custom-navs button {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 14px;
+  color: var(--mosque-black);
+  border-radius: 50%;
+  background-color: var(--mosque-white);
+  transition: all 500ms ease;
+}
+.donate__custom-navs button:hover {
+  color: var(--mosque-white);
+  background-color: var(--mosque-primary);
+}
+.donate__custom-navs button span {
+  border: none;
+  outline: none;
+  color: inherit;
+}
+.donate__carousel .owl-stage {
+  display: flex;
+}
+.donate__carousel .item,
+.donate__carousel .donate__card {
+  height: 100%;
+}
+.donate__card {
+  text-align: center;
+  border-radius: 20px;
+  background-color: var(--mosque-white);
+}
+.donate__card__image {
+  display: block;
+  border-radius: 20px 20px 0px 0px;
+}
+.donate__card__image img {
+  width: 100%;
+  display: block;
+  border-radius: inherit;
+}
+.donate__card__content {
+  padding: 21px 30px 30px;
+}
+@media (max-width: 390px) {
+  .donate__card__content {
+    padding: 21px 25px 25px;
+  }
+}
+.donate__card__title {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+.donate__card__title a {
+  color: inherit;
+  background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+  transition: all 500ms ease;
+}
+.donate__card__title a:hover {
+  color: var(--mosque-primary);
+}
+.donate__card__title a:hover {
+  background-size: 100% 1px;
+}
+.donate__card__text {
+  margin-bottom: 30px;
 }
 
 /*--------------------------------------------------------------
