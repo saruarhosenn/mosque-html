@@ -1,0 +1,215 @@
+.member-card {
+  position: relative;
+  padding: 15px;
+  border-radius: 999px 999px 0 0;
+  background-color: $mosque-white;
+  border: 1px solid $mosque-border-color;
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 999px 999px 0 0;
+    transition: all 500ms ease;
+
+    &__inner {
+      position: relative;
+      border-radius: 999px 999px 0 0;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: calc(100% - 75px);
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        opacity: 0;
+        transform: translateY(50%);
+        background: linear-gradient(
+          180deg,
+          rgba(217, 217, 217, 0) 0%,
+          rgba(0, 125, 58, 0.9) 81.4%
+        );
+        transition: all 500ms ease;
+      }
+    }
+
+    img {
+      width: 100% !important;
+      display: block;
+      border-radius: inherit;
+      transition: all 500ms ease;
+    }
+  }
+
+  &.active &__image__inner::after {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  .social-links {
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: 26px;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-200%);
+    z-index: 1;
+    transition: all 500ms ease;
+
+    a {
+      color: $mosque-black;
+      background-color: $mosque-white;
+    }
+
+    a:hover {
+      color: $mosque-black;
+      background-color: $mosque-secondary;
+
+      i {
+        color: $mosque-black;
+      }
+    }
+  }
+
+  &__info {
+    padding: 25px 23px 7px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    transition: all 500ms ease;
+
+    @media (max-width: 375px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: $mosque-black;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1.318;
+
+    @media (max-width: 375px) {
+      font-size: 18px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      font-size: 18px;
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $mosque-primary;
+      }
+
+      @include borderHover;
+    }
+  }
+
+  &__designation {
+    margin: 0px;
+    text-transform: capitalize;
+  }
+
+  &__btn {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    position: relative;
+    border-radius: 50%;
+    background-color: $mosque-primary;
+    transition: all 500ms ease;
+
+    &.active {
+      transform: rotate(45deg);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      width: 17px;
+      height: 2px;
+      background-color: $mosque-white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    &:hover,
+    &.active {
+      background-color: $mosque-primary;
+    }
+  }
+}
+
+.members {
+  position: relative;
+  background-color: $mosque-white;
+
+  &__top {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    margin: 0px;
+  }
+
+  &__custom-navs {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+
+    button {
+      border: none;
+      outline: none;
+      margin: 0;
+      padding: 0;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      font-size: 14px;
+      color: $mosque-black;
+      border-radius: 50%;
+      background-color: $mosque-white2;
+      transition: all 500ms ease;
+
+      &:hover {
+        color: $mosque-white;
+        background-color: $mosque-primary;
+      }
+
+      span {
+        border: none;
+        outline: none;
+        color: inherit;
+      }
+    }
+  }
+}

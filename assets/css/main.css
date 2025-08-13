@@ -2078,6 +2078,201 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Member
+--------------------------------------------------------------*/
+.member-card {
+  position: relative;
+  padding: 15px;
+  border-radius: 999px 999px 0 0;
+  background-color: var(--mosque-white);
+  border: 1px solid var(--mosque-border-color);
+}
+.member-card__image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 999px 999px 0 0;
+  transition: all 500ms ease;
+}
+.member-card__image__inner {
+  position: relative;
+  border-radius: 999px 999px 0 0;
+}
+.member-card__image__inner::after {
+  content: "";
+  width: 100%;
+  height: calc(100% - 75px);
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  opacity: 0;
+  transform: translateY(50%);
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(0, 125, 58, 0.9) 81.4%);
+  transition: all 500ms ease;
+}
+.member-card__image img {
+  width: 100% !important;
+  display: block;
+  border-radius: inherit;
+  transition: all 500ms ease;
+}
+.member-card.active .member-card__image__inner::after {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.member-card .social-links {
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-200%);
+  z-index: 1;
+  transition: all 500ms ease;
+}
+.member-card .social-links a {
+  color: var(--mosque-black);
+  background-color: var(--mosque-white);
+}
+.member-card .social-links a:hover {
+  color: var(--mosque-black);
+  background-color: var(--mosque-secondary);
+}
+.member-card .social-links a:hover i {
+  color: var(--mosque-black);
+}
+.member-card__info {
+  padding: 25px 23px 7px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: all 500ms ease;
+}
+@media (max-width: 375px) {
+  .member-card__info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .member-card__info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.member-card__name {
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: var(--mosque-black);
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.318;
+}
+@media (max-width: 375px) {
+  .member-card__name {
+    font-size: 18px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .member-card__name {
+    font-size: 18px;
+  }
+}
+.member-card__name a {
+  color: inherit;
+  background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+  transition: all 500ms ease;
+}
+.member-card__name a:hover {
+  color: var(--mosque-primary);
+}
+.member-card__name a:hover {
+  background-size: 100% 1px;
+}
+.member-card__designation {
+  margin: 0px;
+  text-transform: capitalize;
+}
+.member-card__btn {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--mosque-primary);
+  transition: all 500ms ease;
+}
+.member-card__btn.active {
+  transform: rotate(45deg);
+}
+.member-card__btn::before, .member-card__btn::after {
+  content: "";
+  width: 17px;
+  height: 2px;
+  background-color: var(--mosque-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.member-card__btn::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.member-card__btn:hover, .member-card__btn.active {
+  background-color: var(--mosque-primary);
+}
+
+.members {
+  position: relative;
+  background-color: var(--mosque-white);
+}
+.members__top {
+  margin-bottom: 40px;
+}
+.members .section-title {
+  margin: 0px;
+}
+.members__custom-navs {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.members__custom-navs button {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 14px;
+  color: var(--mosque-black);
+  border-radius: 50%;
+  background-color: var(--mosque-white2);
+  transition: all 500ms ease;
+}
+.members__custom-navs button:hover {
+  color: var(--mosque-white);
+  background-color: var(--mosque-primary);
+}
+.members__custom-navs button span {
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+/*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------

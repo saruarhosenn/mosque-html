@@ -117,6 +117,35 @@
     });
   }
 
+  /* team card 03 */
+  $(".member-card__btn").on("mouseenter", function () {
+    const $parentCard = $(this).closest(".member-card");
+    const $socialLinks = $parentCard.find(".social-links");
+
+    $(".member-card__btn").removeClass("active");
+    $(".member-card").removeClass("active");
+    $(".social-links").css({
+      opacity: "",
+      transform: "",
+    });
+
+    $(this).addClass("active");
+    $parentCard.addClass("active");
+    $socialLinks.css({
+      opacity: "1",
+      transform: "translateX(-50%) translateY(0%)",
+    });
+  });
+
+  $(".member-card").on("mouseleave", function () {
+    $(".member-card__btn").removeClass("active");
+    $(".member-card").removeClass("active");
+    $(".social-links").css({
+      opacity: "",
+      transform: "",
+    });
+  });
+
   // <div class="why-choose-seven__customer__number">
   //   <span class="odometer" data-count="30">00</span>
   //   <span class="why-choose-seven__customer__nuber__count">K</span>
