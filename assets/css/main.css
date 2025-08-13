@@ -345,7 +345,7 @@ h6 {
   margin-bottom: 25px;
 }
 .section-title--center {
-  margin-bottom: 56px;
+  margin-bottom: 42px;
   text-align: center;
 }
 .section-title__top {
@@ -369,6 +369,7 @@ h6 {
 }
 .section-title__title {
   margin: 0px;
+  font-family: var(--mosque-heading-font);
   font-size: var(--heading-size-2);
   color: var(--mosque-black);
   font-weight: 700;
@@ -2035,12 +2036,12 @@ h6 {
 }
 .donate__card {
   text-align: center;
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: var(--mosque-white);
 }
 .donate__card__image {
   display: block;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
 }
 .donate__card__image img {
   width: 100%;
@@ -2142,7 +2143,7 @@ h6 {
   color: var(--mosque-black);
 }
 .member-card__info {
-  padding: 25px 23px 7px;
+  padding: 24px 23px 5px;
   position: relative;
   z-index: 1;
   display: flex;
@@ -2167,7 +2168,7 @@ h6 {
   margin-bottom: 5px;
   font-size: 20px;
   color: var(--mosque-black);
-  font-weight: 700;
+  font-weight: 600;
   text-transform: capitalize;
   line-height: 1.318;
 }
@@ -2275,6 +2276,146 @@ h6 {
 /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Blog
+--------------------------------------------------------------*/
+.blog-card {
+  position: relative;
+  border-radius: 15px;
+  background-color: var(--mosque-white);
+  transition: all 500ms ease;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.05);
+}
+.blog-card__image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px 15px 0px 0px;
+}
+.blog-card__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: inherit;
+  transition: all 500ms ease;
+}
+.blog-card__image__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  transform: translateY(-30%);
+  border-radius: inherit;
+  background-color: RGBA(var(--mosque-black-rgb), 0.7);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+.blog-card__image__link::before, .blog-card__image__link::after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: var(--mosque-white);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.blog-card__image__link::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.blog-card:hover .blog-card__image img {
+  transform: scale(1.1);
+}
+.blog-card:hover .blog-card__image__link {
+  opacity: 1;
+  transform: translateY(0);
+}
+.blog-card__content {
+  padding: 25px 30px 30px;
+}
+@media (max-width: 425px) {
+  .blog-card__content {
+    padding: 20px 20px 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .blog-card__content {
+    padding: 20px 20px 20px;
+  }
+}
+.blog-card__meta {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.blog-card__meta li {
+  position: relative;
+  font-size: 18px;
+  color: var(--mosque-text);
+  font-weight: 400;
+  line-height: 1.375;
+}
+.blog-card__meta li:not(:last-child)::after {
+  content: "/";
+  margin: 0px 13px;
+  font-size: 16px;
+  color: var(--mosque-text);
+  font-weight: 400;
+  line-height: 1.375;
+}
+.blog-card__meta li a {
+  color: inherit;
+}
+.blog-card__meta li a:hover {
+  color: var(--mosque-primary);
+}
+.blog-card__title {
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+@media (max-width: 425px) {
+  .blog-card__title {
+    font-size: 22px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .blog-card__title {
+    font-size: 22px;
+  }
+}
+.blog-card__title a {
+  color: inherit;
+  background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+  transition: all 500ms ease;
+}
+.blog-card__title a:hover {
+  color: var(--mosque-primary);
+}
+.blog-card__title a:hover {
+  background-size: 100% 1px;
+}
+.blog-card__text {
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.blog-post {
+  background-color: var(--mosque-white2);
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/

@@ -261,7 +261,7 @@ p {
   margin-bottom: 25px;
 
   &--center {
-    margin-bottom: 56px;
+    margin-bottom: 42px;
     text-align: center;
   }
 
@@ -289,6 +289,7 @@ p {
 
   &__title {
     margin: 0px;
+    font-family: $mosque-heading-font;
     font-size: $heading-size-2;
     color: $mosque-black;
     font-weight: 700;
