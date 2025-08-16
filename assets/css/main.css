@@ -282,9 +282,10 @@ h6 {
 
 /* button */
 .mosque-btn {
+  display: inline-block;
   position: relative;
   z-index: 1;
-  display: inline-block;
+  cursor: pointer;
   vertical-align: middle;
   -webkit-appearance: none;
   border: none;
@@ -299,45 +300,63 @@ h6 {
   overflow: hidden;
   border-radius: 6px;
   background-color: var(--mosque-primary);
-  transition: 0.5s ease-in-out;
-}
-.mosque-btn::before, .mosque-btn::after {
-  content: "";
-  width: 0;
-  height: 0;
-  position: absolute;
-  z-index: -1;
-  background-color: var(--mosque-secondary);
-  transition: 0.4s;
-  -webkit-transition: 0.4s;
-  -moz-transition: 0.4s;
-  -ms-transition: 0.4s;
-  -o-transition: 0.4s;
+  backface-visibility: hidden;
+  transform: translateZ(0px);
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-property: color;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
 }
 .mosque-btn::before {
-  left: 0;
-  bottom: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  transform-origin: 50% 50% 0;
+  -webkit-transform-origin: 50% 50% 0;
+  -moz-transform-origin: 50% 50% 0;
+  border-radius: inherit;
+  background-color: var(--mosque-secondary);
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-property: transform;
+  -webkit-transition-property: transform;
+  -moz-transition-property: transform;
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  -moz-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
-.mosque-btn::after {
-  top: 0;
-  right: 0;
+.mosque-btn:hover::before {
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  -moz-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 .mosque-btn:hover {
   color: var(--mosque-black);
-}
-.mosque-btn:hover::before, .mosque-btn:hover::after {
-  width: 50%;
-  height: 100%;
 }
 .mosque-btn--secondary {
   color: var(--mosque-black);
   background-color: var(--mosque-secondary);
 }
+.mosque-btn--secondary::before {
+  background-color: var(--mosque-primary);
+}
 .mosque-btn--secondary:hover {
   color: var(--mosque-white);
-}
-.mosque-btn--secondary::before, .mosque-btn--secondary::after {
-  background-color: var(--mosque-primary);
 }
 
 /* section title */
@@ -2204,29 +2223,18 @@ h6 {
   padding: 0;
   margin: 0;
   border: none;
-  position: relative;
+  font-size: 18px;
+  color: var(--mosque-white);
   border-radius: 50%;
   background-color: var(--mosque-primary);
   transition: all 500ms ease;
 }
-.member-card__btn.active {
-  transform: rotate(45deg);
-}
-.member-card__btn::before, .member-card__btn::after {
-  content: "";
-  width: 17px;
-  height: 2px;
-  background-color: var(--mosque-white);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.member-card__btn::after {
-  transform: translate(-50%, -50%) rotate(90deg);
+.member-card__btn i {
+  vertical-align: middle;
 }
 .member-card__btn:hover, .member-card__btn.active {
-  background-color: var(--mosque-primary);
+  color: var(--mosque-black);
+  background-color: var(--mosque-secondary);
 }
 
 .members {

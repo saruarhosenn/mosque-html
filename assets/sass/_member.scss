@@ -132,34 +132,20 @@
     padding: 0;
     margin: 0;
     border: none;
-    position: relative;
+    font-size: 18px;
+    color: $mosque-white;
     border-radius: 50%;
     background-color: $mosque-primary;
     transition: all 500ms ease;
 
-    &.active {
-      transform: rotate(45deg);
-    }
-
-    &::before,
-    &::after {
-      content: "";
-      width: 17px;
-      height: 2px;
-      background-color: $mosque-white;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    &::after {
-      transform: translate(-50%, -50%) rotate(90deg);
+    i {
+      vertical-align: middle;
     }
 
     &:hover,
     &.active {
-      background-color: $mosque-primary;
+      color: $mosque-black;
+      background-color: $mosque-secondary;
     }
   }
 }
