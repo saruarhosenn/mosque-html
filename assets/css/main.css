@@ -2098,6 +2098,151 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Five Pillars
+--------------------------------------------------------------*/
+.five-pillars {
+  position: relative;
+  background-color: var(--mosque-black2);
+}
+.five-pillars .section-title {
+  margin-bottom: 20px;
+}
+.five-pillars .section-title__title {
+  color: var(--mosque-white);
+}
+.five-pillars__text {
+  margin-bottom: 42px;
+  color: var(--mosque-white);
+}
+.five-pillars__text span {
+  color: var(--mosque-secondary);
+}
+.five-pillars__grid {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.five-pillars__item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.five-pillars__item__icon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.five-pillars__item__icon i {
+  position: relative;
+  z-index: 1;
+  font-size: 33px;
+  color: var(--mosque-primary);
+}
+.five-pillars__item__shape {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.five-pillars__item__title {
+  margin-bottom: 10px;
+  color: var(--mosque-white);
+}
+.five-pillars__item__text {
+  margin: 0px;
+  color: var(--mosque-primary);
+}
+.five-pillars__video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.five-pillars__video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: RGBA(var(--mosque-black2-rgb), 0.3);
+}
+.five-pillars__video__btn {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 101px;
+  height: 101px;
+  font-size: 26px;
+  color: var(--mosque-white);
+  border-radius: 50%;
+  background-color: var(--mosque-primary);
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.five-pillars__video__btn:hover {
+  color: var(--mosque-white);
+  background-color: var(--mosque-secondary);
+}
+.five-pillars__video__ripple::before, .five-pillars__video__ripple::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 0 rgba(0, 125, 58, 0.5);
+  -webkit-animation: pulse 3s infinite;
+  animation: pulse 3s infinite;
+}
+.five-pillars__video__ripple::before {
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+.five-pillars__video__ripple::after {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+@keyframes pulse {
+  70% {
+    box-shadow: 0 0 0 40px rgba(0, 125, 58, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+.five-pillars__video {
+  width: 626px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+/*--------------------------------------------------------------
 # Member
 --------------------------------------------------------------*/
 .member-card {
@@ -2345,12 +2490,16 @@ h6 {
   border: none;
   padding-left: 25px;
   padding-right: 25px;
+  font-family: var(--mosque-font-2);
   font-size: 16px;
   font-weight: 400;
   color: var(--mosque-text);
   border-radius: 8px;
   background-color: var(--mosque-white);
   transition: all 500ms ease;
+}
+.cta__form__input::placeholder {
+  font-family: var(--mosque-font);
 }
 .cta__form__input:focus {
   color: var(--mosque-black);

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?zemadd');
-  src:  url('fonts/icomoon.eot?zemadd#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?zemadd') format('truetype'),
-    url('fonts/icomoon.woff?zemadd') format('woff'),
-    url('fonts/icomoon.svg?zemadd#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?q9t2gf');
+  src:  url('fonts/icomoon.eot?q9t2gf#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?q9t2gf') format('truetype'),
+    url('fonts/icomoon.woff?q9t2gf') format('woff'),
+    url('fonts/icomoon.svg?q9t2gf#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-zakat:before {
+  content: "\e907";
+}
+.icon-fasting:before {
+  content: "\e908";
+}
+.icon-prayer:before {
+  content: "\e909";
+}
+.icon-al-quran:before {
+  content: "\e90a";
+}
+.icon-kaaba:before {
+  content: "\e90b";
+}
+.icon-arabesque-motif:before {
+  content: "\e904";
+}
 .icon-envelope:before {
   content: "\e901";
 }
