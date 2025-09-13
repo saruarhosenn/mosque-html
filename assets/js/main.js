@@ -30,6 +30,43 @@
     dynamicyearElm.html(currentYear);
   }
 
+  // magnificPopup video view
+  if ($(".video-popup").length) {
+    $(".video-popup").magnificPopup({
+      type: "iframe",
+      mainClass: "mfp-fade",
+      removalDelay: 160,
+      preloader: true,
+
+      fixedContentPos: false,
+    });
+  }
+
+  // magnificPopup img view
+  if ($(".img-popup").length) {
+    var groups = {};
+    $(".img-popup").each(function () {
+      var id = parseInt($(this).attr("data-group"), 10);
+
+      if (!groups[id]) {
+        groups[id] = [];
+      }
+
+      groups[id].push(this);
+    });
+
+    $.each(groups, function () {
+      $(this).magnificPopup({
+        type: "image",
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        gallery: {
+          enabled: true,
+        },
+      });
+    });
+  }
+  
   // custom coursor
 
   // one page menu
@@ -290,19 +327,6 @@
     initFitRowLayout();
     initPostFilter();
   }
-
-  // magnificPopup img view
-  $(".image-popup").magnificPopup({
-    type: "image",
-    gallery: {
-      enabled: true,
-    },
-  });
-
-  // magnificPopup video view
-  $(".video-popup").magnificPopup({
-    type: "iframe",
-  });
 
   // window load event
   $(window).on("load", function () {

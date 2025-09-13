@@ -10,13 +10,27 @@
     color: $mosque-white;
   }
 
+  &__description {
+    margin-bottom: 40px;
+  }
+
   &__text {
-    margin-bottom: 42px;
+    margin: 0px;
     color: $mosque-white;
 
     span {
+      display: inline-block;
+      margin-top: 10px;
       color: $mosque-secondary;
     }
+
+    br {
+      display: inline;
+    }
+  }
+
+  &__text + &__text {
+    margin-top: 20px;
   }
 
   &__grid {
@@ -65,15 +79,21 @@
   }
 
   &__video {
+    width: 35%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    @include bg(top center, cover);
 
     &::after {
       content: "";
       @include positionFull;
-      background-color: RGBA($mosque-black2-rgb, 0.3);
+      background-color: RGBA($mosque-black2-rgb, 0.5);
     }
 
     &__btn {
@@ -141,14 +161,5 @@
         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
       }
     }
-  }
-
-  &__video {
-    width: 626px;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    @include bg(top center, cover);
   }
 }

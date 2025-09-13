@@ -2110,12 +2110,23 @@ h6 {
 .five-pillars .section-title__title {
   color: var(--mosque-white);
 }
+.five-pillars__description {
+  margin-bottom: 40px;
+}
 .five-pillars__text {
-  margin-bottom: 42px;
+  margin: 0px;
   color: var(--mosque-white);
 }
 .five-pillars__text span {
+  display: inline-block;
+  margin-top: 10px;
   color: var(--mosque-secondary);
+}
+.five-pillars__text br {
+  display: inline;
+}
+.five-pillars__text + .five-pillars__text {
+  margin-top: 20px;
 }
 .five-pillars__grid {
   display: grid;
@@ -2159,10 +2170,18 @@ h6 {
   color: var(--mosque-primary);
 }
 .five-pillars__video {
+  width: 35%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
 }
 .five-pillars__video::after {
   content: "";
@@ -2171,7 +2190,7 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: RGBA(var(--mosque-black2-rgb), 0.3);
+  background-color: RGBA(var(--mosque-black2-rgb), 0.5);
 }
 .five-pillars__video__btn {
   position: relative;
@@ -2230,16 +2249,6 @@ h6 {
   100% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
-}
-.five-pillars__video {
-  width: 626px;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
 }
 
 /*--------------------------------------------------------------
@@ -2511,6 +2520,99 @@ h6 {
 /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
+.gallery {
+  background-color: var(--mosque-white);
+}
+.gallery__card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.gallery__card img {
+  display: block;
+  width: 100%;
+  border-radius: inherit;
+}
+.gallery__card__hover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+}
+.gallery__card__hover::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  visibility: hidden;
+  right: -100%;
+  bottom: -100%;
+  border-radius: inherit;
+  background-color: RGBA(var(--mosque-black-rgb), 0.6);
+  transition: all 500ms ease;
+}
+.gallery__card__hover .img-popup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--mosque-secondary);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+  border-radius: 50%;
+  transition: all 500ms ease;
+}
+.gallery__card__hover .img-popup:hover {
+  background-color: var(--mosque-primary);
+}
+.gallery__card:hover .gallery__card__hover {
+  visibility: visible;
+}
+.gallery__card:hover .gallery__card__hover::after {
+  right: 0px;
+  bottom: 0px;
+  visibility: visible;
+}
+.gallery__card:hover .img-popup {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+.gallery__card__icon {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  display: block;
+  transition: all 500ms ease;
+}
+.gallery__card__icon::after, .gallery__card__icon::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--mosque-black);
+  transition: all 500ms ease;
+}
+.gallery__card__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.img-popup:hover .gallery__card__icon::after, .img-popup:hover .gallery__card__icon::before {
+  background-color: var(--mosque-white);
+}
+
 /*--------------------------------------------------------------
 # Blog
 --------------------------------------------------------------*/
