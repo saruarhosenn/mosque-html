@@ -27,15 +27,15 @@ body.locked {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: $mosque-black;
+  background-color: $mosque-white3;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $mosque-secondary;
+  background-color: $mosque-primary;
   height: 60px;
   border-radius: 30px;
 }
@@ -47,7 +47,7 @@ body.locked {
 
 a {
   color: $mosque-primary;
-  transition: all 400ms ease;
+  transition: all 500ms ease;
 }
 
 a,
@@ -570,7 +570,7 @@ p {
 
   &__text {
     margin: 30px 0 10px;
-    font-family: $mosque-font;
+    font-family: $mosque-font-2;
     font-size: 25px;
     color: $mosque-white;
     font-weight: 700;

@@ -12,6 +12,8 @@
 	--mosque-white-rgb: #{toRGB(#FFFFFF)};
 	--mosque-white2: #F3F5F4;
 	--mosque-white2-rgb: #{toRGB(#F3F5F4)};
+	--mosque-white3: #E3EFE6;
+	--mosque-white3-rgb: #{toRGB(#E3EFE6)};
 	--mosque-black: #08050D;
 	--mosque-black-rgb: #{toRGB(#08050D)};
 	--mosque-black2: #000000;
@@ -40,6 +42,8 @@ $mosque-white:var(--mosque-white);
 $mosque-white-rgb:var(--mosque-white-rgb);
 $mosque-white2:var(--mosque-white2);
 $mosque-white2-rgb:var(--mosque-white2-rgb);
+$mosque-white3:var(--mosque-white3);
+$mosque-white3-rgb:var(--mosque-white3-rgb);
 $mosque-black:var(--mosque-black);
 $mosque-black-rgb:var(--mosque-black-rgb);
 $mosque-black2:var(--mosque-black2);

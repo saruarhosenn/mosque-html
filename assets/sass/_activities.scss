@@ -1,0 +1,118 @@
+.activities {
+  background-color: $mosque-white2;
+
+  &__card {
+    position: relative;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: $mosque-white;
+
+    @media (max-width: 412px) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    &__bg {
+      width: 70px;
+      height: 70px;
+      margin: 0px auto;
+      position: relative;
+      position: absolute;
+      top: 35px;
+      left: 0px;
+      right: 0px;
+      border-radius: 50%;
+      overflow: hidden;
+      @include bg(top center, cover);
+      transition: all 500ms ease;
+
+      &::after {
+        content: "";
+        @include positionFull;
+        border-radius: inherit;
+        background-color: RGBA($mosque-black-rgb, 0.3);
+      }
+    }
+
+    &:hover &__bg {
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      border-radius: 0px;
+    }
+
+    &__content {
+      position: relative;
+      z-index: 1;
+    }
+
+    &__icon {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0px auto 35px;
+      border-radius: 50%;
+      font-size: 40px;
+      color: $mosque-white;
+      background-color: $mosque-primary;
+      transition: all 500ms ease;
+    }
+
+    &:hover &__icon {
+      color: $mosque-primary;
+      background-color: $mosque-white;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+      font-size: 24px;
+      color: $mosque-black;
+      font-weight: 700;
+      line-height: 1.371;
+
+      a {
+        color: inherit;
+        @include borderHover;
+      }
+    }
+
+    &__text {
+      margin-bottom: 30px;
+      transition: all 500ms ease;
+    }
+
+    &:hover &__title,
+    &:hover &__text {
+      color: $mosque-white;
+    }
+
+    .mosque-btn::before {
+      background-color: $mosque-white;
+    }
+
+    &:hover {
+      .mosque-btn::before {
+        transform: scaleX(1);
+        transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+      }
+
+      .mosque-btn {
+        color: $mosque-black;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 60px;
+    text-align: center;
+  }
+}
