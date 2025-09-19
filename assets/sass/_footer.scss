@@ -4,7 +4,15 @@
 
   &__top {
     position: relative;
-    padding: 120px 0px 80px;
+    padding: 270px 0px 80px;
+
+    @include device(sm) {
+      padding-top: 250px;
+    }
+
+    @include device(xsm) {
+      padding-top: 230px;
+    }
   }
 
   &__bg {

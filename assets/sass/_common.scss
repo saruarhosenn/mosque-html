@@ -310,6 +310,10 @@ p {
     line-height: 1.375;
     text-transform: capitalize;
 
+    @include device(md) {
+      font-size: 45px;
+    }
+
     @include device(xsm) {
       font-size: 40px;
     }
@@ -648,7 +652,7 @@ p {
   cursor: pointer;
   display: block;
   border-radius: 50%;
-  background-color: $mosque-black;
+  background-color: $mosque-primary;
   z-index: 99;
   opacity: 0;
   padding: 6px;
@@ -668,7 +672,7 @@ p {
     content: "\f30c";
     font-family: "Font Awesome 5 Free";
     font-size: 18px;
-    color: $mosque-primary;
+    color: $mosque-white;
     text-align: center;
     font-weight: 900;
     line-height: 50px;
@@ -690,7 +694,7 @@ p {
   }
 
   &__circle path {
-    stroke: $mosque-primary;
+    stroke: $mosque-white;
     stroke-width: 4;
     fill: none;
     box-sizing: border-box;

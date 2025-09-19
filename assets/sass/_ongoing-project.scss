@@ -1,0 +1,56 @@
+.ongoing-project {
+  background-color: $mosque-white2;
+
+  &__card {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: 312px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: $mosque-white;
+
+    @media (max-width: 1199px) {
+      grid-template-columns: auto;
+      padding-bottom: 30px;
+      text-align: center;
+    }
+
+    &__image {
+      display: block;
+      border-radius: 15px;
+
+      img {
+        width: 100%;
+        display: block;
+        border-radius: inherit;
+      }
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-transform: capitalize;
+
+      a {
+        color: inherit;
+
+        &:hover {
+          color: $mosque-primary;
+        }
+
+        @include borderHover;
+      }
+    }
+
+    &__text {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__button {
+    margin-top: 60px;
+    text-align: center;
+  }
+}

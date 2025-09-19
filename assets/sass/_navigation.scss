@@ -231,9 +231,9 @@
     flex-shrink: 0;
     position: relative;
     font-size: 20px;
-    color: $mosque-black;
+    color: $mosque-white;
     border-radius: 50%;
-    background-color: $mosque-white;
+    background-color: $mosque-primary;
     transition: all 500ms ease;
 
     @include device(lg) {
@@ -245,8 +245,8 @@
     }
 
     &:hover {
-      color: $mosque-white;
-      background-color: $mosque-primary;
+      color: $mosque-black;
+      background-color: $mosque-secondary;
     }
 
     &::before {
@@ -313,17 +313,7 @@
     background-color: $mosque-primary;
   }
 
-  .main-header__user {
-    color: $mosque-black;
-    background-color: $mosque-secondary;
-
-    &:hover {
-      color: $mosque-white;
-      background-color: $mosque-primary;
-    }
-
-    &::before {
-      background-color: rgba($mosque-black-rgb, 0.2);
-    }
+  .main-header__user::before {
+    background-color: rgba($mosque-black-rgb, 0.2);
   }
 }

@@ -1,6 +1,45 @@
 .cta {
-  padding: 75px 0px 90px;
-  position: relative;
+  background-color: $mosque-white2;
+
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -150px;
+    padding: 64px 150px 80px;
+    overflow: hidden;
+    border-radius: 500px;
+    background-color: $mosque-primary;
+
+    @media (max-width: 1199px) {
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+
+    @media (max-width: 991px) {
+      padding-left: 80px;
+      padding-right: 80px;
+      border-radius: 150px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 56px 40px 70px;
+      border-radius: 50px;
+    }
+
+    @media (max-width: 575px) {
+      padding-top: 57px;
+    }
+
+    @media (max-width: 412px) {
+      padding-left: 30px;
+      padding-right: 30px;
+      border-radius: 30px;
+    }
+
+    @media (max-width: 390px) {
+      padding-top: 60px;
+    }
+  }
 
   &__bg {
     position: relative;
@@ -10,16 +49,13 @@
     &::after {
       content: "";
       @include positionFull;
-      background-color: RGBA($mosque-black-rgb, 0.6);
+      background-color: RGBA($mosque-black-rgb, 0.7);
     }
   }
 
-  .container {
+  &__content {
     position: relative;
     z-index: 1;
-  }
-
-  &__content {
     text-align: center;
   }
 
@@ -45,7 +81,7 @@
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 20px;
 
-      @media (max-width: 575px) {
+      @media (max-width: 767px) {
         grid-template-columns: repeat(1, 1fr);
       }
     }

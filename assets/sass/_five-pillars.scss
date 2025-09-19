@@ -2,6 +2,20 @@
   position: relative;
   background-color: $mosque-black2;
 
+  &__bg {
+    width: 100%;
+    height: 273px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0.06;
+    background-repeat: repeat-x;
+    background-color: transparent;
+    background-blend-mode: initial;
+    background-position: left top;
+    animation: moveBackground 50s linear 0s infinite;
+  }
+
   .section-title {
     margin-bottom: 20px;
   }
