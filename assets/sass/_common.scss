@@ -652,13 +652,13 @@ p {
   cursor: pointer;
   display: block;
   border-radius: 50%;
-  background-color: $mosque-primary;
   z-index: 99;
   opacity: 0;
   padding: 6px;
   visibility: hidden;
   transform: translateY(15px);
   -webkit-transition: all 200ms linear;
+  background-color: $mosque-black;
   transition: all 200ms linear;
 
   &--active {
@@ -672,7 +672,7 @@ p {
     content: "\f30c";
     font-family: "Font Awesome 5 Free";
     font-size: 18px;
-    color: $mosque-white;
+    color: $mosque-primary;
     text-align: center;
     font-weight: 900;
     line-height: 50px;
@@ -694,7 +694,7 @@ p {
   }
 
   &__circle path {
-    stroke: $mosque-white;
+    stroke: $mosque-primary;
     stroke-width: 4;
     fill: none;
     box-sizing: border-box;

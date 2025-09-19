@@ -66,28 +66,8 @@
       });
     });
   }
-  
-  // custom coursor
 
-  // one page menu
-
-  // jarallax
-  if ($(".jarallax").length > 0) {
-    $(".jarallax").jarallax({
-      speed: 0.2,
-      imgWidth: 1200,
-      imgHeight: 520,
-    });
-  }
-
-  // counter js
-  new PureCounter();
-  new PureCounter({
-    filesizing: true,
-    selector: ".filesizecount",
-    pulse: 2,
-  });
-
+  // sticky header
   if ($(".sticky-header").length) {
     $(".sticky-header")
       .clone()
@@ -95,7 +75,6 @@
       .addClass("sticky-header--cloned");
   }
 
-  // window scroll event
   function stickyMenuUpScroll($targetMenu, $toggleClass) {
     var lastScrollTop = 0;
     window.addEventListener(
@@ -133,6 +112,7 @@
     $("body").removeClass("locked");
   });
 
+  // wow animation
   if ($(".wow").length) {
     var wow = new WOW({
       boxClass: "wow", // animated element css class (default is wow)
@@ -143,18 +123,7 @@
     wow.init();
   }
 
-  // odometer
-  if ($(".odometer").length) {
-    var odo = $(".odometer");
-    odo.each(function () {
-      $(this).appear(function () {
-        var countNumber = $(this).attr("data-count");
-        $(this).html(countNumber);
-      });
-    });
-  }
-
-  /* team card 03 */
+  /* member card */
   $(".member-card__btn").on("mouseenter", function () {
     const $parentCard = $(this).closest(".member-card");
     const $socialLinks = $parentCard.find(".social-links");
@@ -182,11 +151,6 @@
       transform: "",
     });
   });
-
-  // <div class="why-choose-seven__customer__number">
-  //   <span class="odometer" data-count="30">00</span>
-  //   <span class="why-choose-seven__customer__nuber__count">K</span>
-  // </div>
 
   // owl carousel slider
   function thmOwlInit() {
@@ -222,20 +186,6 @@
     }
   }
 
-  // cirle text
-  function mosque_cuved_circle() {
-    let circleTypeElm = $(".curved-circle--item");
-    if (circleTypeElm.length) {
-      circleTypeElm.each(function () {
-        let elm = $(this);
-        let options = elm.data("circle-text-options");
-        elm.circleType(
-          "object" === typeof options ? options : JSON.parse(options)
-        );
-      });
-    }
-  }
-
   // scroll to top
   let scrollTop = $(".scroll-top path");
   if (scrollTop.length) {
@@ -263,6 +213,41 @@
         back.removeClass("scroll-top--active");
       }
     });
+  }
+
+  //fact counter + text count
+  if ($(".count-box").length) {
+    $(".count-box").appear(
+      function () {
+        var $t = $(this),
+          n = $t.find(".count-text").attr("data-stop"),
+          r = parseInt($t.find(".count-text").attr("data-speed"), 10);
+
+        if (!$t.hasClass("counted")) {
+          $t.addClass("counted");
+          $({
+            countNum: $t.find(".count-text").text(),
+          }).animate(
+            {
+              countNum: n,
+            },
+            {
+              duration: r,
+              easing: "linear",
+              step: function () {
+                $t.find(".count-text").text(Math.floor(this.countNum));
+              },
+              complete: function () {
+                $t.find(".count-text").text(this.countNum);
+              },
+            }
+          );
+        }
+      },
+      {
+        accY: 0,
+      }
+    );
   }
 
   // masonry layout initialization
@@ -333,7 +318,17 @@
     vanishPreloder();
     thmOwlInit();
     initMasonry();
-    mosque_cuved_circle();
+
+    if ($(".circle-progress").length) {
+      $(".circle-progress").appear(function () {
+        $(".circle-progress").each(function () {
+          let progress = $(this);
+          let progressOptions = progress.data("options");
+          progress.circleProgress(progressOptions);
+          progress.data("original-options", progressOptions);
+        });
+      });
+    }
   });
 
   // window scroll event

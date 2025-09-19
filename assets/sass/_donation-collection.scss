@@ -1,0 +1,151 @@
+.donation-collection {
+  &__item {
+    display: grid;
+    grid-gap: 30px;
+    align-items: center;
+    grid-template-columns: 183px auto;
+    padding: 30px 0px;
+    border-bottom: 1px dashed $mosque-border-color;
+
+    &:first-child {
+      border-top: 1px dashed $mosque-border-color;
+    }
+  }
+
+  &__image {
+    display: inline-block;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.375;
+    text-transform: capitalize;
+  }
+
+  &__goal {
+    margin: 0px;
+    font-size: 25px;
+    color: $mosque-black;
+    font-weight: 600;
+    line-height: 1.375;
+    text-transform: capitalize;
+
+    &__amount {
+      font-family: $mosque-font-2;
+      font-size: 22px;
+      font-weight: 600;
+      color: $mosque-primary;
+    }
+  }
+
+  &__total {
+    &__box {
+      position: relative;
+      padding: 41px 40px 40px;
+      @include bg(top center, cover);
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        background-color: $mosque-secondary;
+      }
+
+      &::after {
+        content: "";
+        @include positionFull;
+        border-radius: inherit;
+        background-color: RGBA($mosque-black-rgb, 0.6);
+      }
+    }
+
+    &__inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    &__amount {
+      margin-bottom: 20px;
+      font-family: $mosque-font-2;
+      font-size: 35px;
+      font-weight: 600;
+      color: $mosque-white;
+      line-height: 1;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.375;
+      color: $mosque-white;
+      text-transform: capitalize;
+    }
+
+    &__donor {
+      margin-bottom: 30px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.375;
+      color: $mosque-white;
+      text-transform: capitalize;
+
+      i {
+        margin-right: 5px;
+        position: relative;
+        top: 2px;
+        font-size: 18px;
+        color: $mosque-secondary;
+      }
+    }
+  }
+
+  &__progress {
+    width: 110px;
+    height: 110px;
+    margin: 0px auto 35px;
+    border-radius: 50%;
+    background-color: $mosque-white;
+
+    &__count {
+      width: 110px;
+      height: 110px;
+      position: relative;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .circle-progress {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        fill: $mosque-secondary;
+      }
+    }
+
+    &__funfact {
+      display: inline-flex;
+      margin: 0px;
+      font-family: $mosque-font-2;
+      font-size: 25px;
+      font-weight: 800;
+      color: $mosque-black;
+      line-height: 1;
+      transition: all 500ms ease;
+    }
+  }
+}

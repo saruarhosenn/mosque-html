@@ -703,13 +703,13 @@ h6 {
   cursor: pointer;
   display: block;
   border-radius: 50%;
-  background-color: var(--mosque-primary);
   z-index: 99;
   opacity: 0;
   padding: 6px;
   visibility: hidden;
   transform: translateY(15px);
   -webkit-transition: all 200ms linear;
+  background-color: var(--mosque-black);
   transition: all 200ms linear;
 }
 .scroll-top--active {
@@ -722,7 +722,7 @@ h6 {
   content: "\f30c";
   font-family: "Font Awesome 5 Free";
   font-size: 18px;
-  color: var(--mosque-white);
+  color: var(--mosque-primary);
   text-align: center;
   font-weight: 900;
   line-height: 50px;
@@ -743,7 +743,7 @@ h6 {
   transition: all 200ms linear;
 }
 .scroll-top__circle path {
-  stroke: var(--mosque-white);
+  stroke: var(--mosque-primary);
   stroke-width: 4;
   fill: none;
   box-sizing: border-box;
@@ -2264,6 +2264,145 @@ h6 {
   100% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
+}
+
+/*--------------------------------------------------------------
+# Donation Collection
+--------------------------------------------------------------*/
+.donation-collection__item {
+  display: grid;
+  grid-gap: 30px;
+  align-items: center;
+  grid-template-columns: 183px auto;
+  padding: 30px 0px;
+  border-bottom: 1px dashed var(--mosque-border-color);
+}
+.donation-collection__item:first-child {
+  border-top: 1px dashed var(--mosque-border-color);
+}
+.donation-collection__image {
+  display: inline-block;
+}
+.donation-collection__image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.donation-collection__title {
+  margin-bottom: 8px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.375;
+  text-transform: capitalize;
+}
+.donation-collection__goal {
+  margin: 0px;
+  font-size: 25px;
+  color: var(--mosque-black);
+  font-weight: 600;
+  line-height: 1.375;
+  text-transform: capitalize;
+}
+.donation-collection__goal__amount {
+  font-family: var(--mosque-font-2);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--mosque-primary);
+}
+.donation-collection__total__box {
+  position: relative;
+  padding: 41px 40px 40px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.donation-collection__total__box::before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  background-color: var(--mosque-secondary);
+}
+.donation-collection__total__box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background-color: RGBA(var(--mosque-black-rgb), 0.6);
+}
+.donation-collection__total__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.donation-collection__total__amount {
+  margin-bottom: 20px;
+  font-family: var(--mosque-font-2);
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--mosque-white);
+  line-height: 1;
+}
+.donation-collection__total__title {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.375;
+  color: var(--mosque-white);
+  text-transform: capitalize;
+}
+.donation-collection__total__donor {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.375;
+  color: var(--mosque-white);
+  text-transform: capitalize;
+}
+.donation-collection__total__donor i {
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+  font-size: 18px;
+  color: var(--mosque-secondary);
+}
+.donation-collection__progress {
+  width: 110px;
+  height: 110px;
+  margin: 0px auto 35px;
+  border-radius: 50%;
+  background-color: var(--mosque-white);
+}
+.donation-collection__progress__count {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.donation-collection__progress__count .circle-progress {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  fill: var(--mosque-secondary);
+}
+.donation-collection__progress__funfact {
+  display: inline-flex;
+  margin: 0px;
+  font-family: var(--mosque-font-2);
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--mosque-black);
+  line-height: 1;
+  transition: all 500ms ease;
 }
 
 /*--------------------------------------------------------------
