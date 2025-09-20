@@ -20,6 +20,8 @@
 	--mosque-black2-rgb: #{toRGB(#000000)};
 	--mosque-black3: #0f1115;
 	--mosque-black3-rgb: #{toRGB(#0f1115)};
+	--mosque-black4: #131111;
+	--mosque-black4-rgb: #{toRGB(#131111)};
 	--mosque-border-color: #DBD8E6;
 	--mosque-border-color-rgb: #{toRGB(#DBD8E6)};
 	--body-size: 18px;
@@ -50,6 +52,8 @@ $mosque-black2:var(--mosque-black2);
 $mosque-black2-rgb:var(--mosque-black2-rgb);
 $mosque-black3:var(--mosque-black3);
 $mosque-black3-rgb:var(--mosque-black3-rgb);
+$mosque-black4:var(--mosque-black4);
+$mosque-black4-rgb:var(--mosque-black4-rgb);
 $mosque-border-color:var(--mosque-border-color);
 $mosque-border-color-rgb:var(--mosque-border-color-rgb);
 $body-size:var(--body-size);

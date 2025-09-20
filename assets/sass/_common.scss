@@ -486,7 +486,7 @@ p {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: $mosque-black;
+  background-color: $mosque-black4;
   width: 100%;
   height: 100vh;
   z-index: 99999999;
@@ -507,7 +507,7 @@ p {
       top: 1px;
       right: 0;
       left: 0;
-      background-color: $mosque-black;
+      background-color: $mosque-black4;
       border-radius: 50%;
     }
 
@@ -604,7 +604,7 @@ p {
   visibility: hidden;
   transform: translateY(15px);
   -webkit-transition: all 200ms linear;
-  background-color: $mosque-black;
+  background-color: $mosque-black4;
   transition: all 200ms linear;
 
   &--active {

@@ -76,6 +76,8 @@
   --mosque-black2-rgb: 0, 0, 0;
   --mosque-black3: #0f1115;
   --mosque-black3-rgb: 15, 17, 21;
+  --mosque-black4: #131111;
+  --mosque-black4-rgb: 19, 17, 17;
   --mosque-border-color: #DBD8E6;
   --mosque-border-color-rgb: 219, 216, 230;
   --body-size: 18px;
@@ -553,7 +555,7 @@ h6 {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: var(--mosque-black);
+  background-color: var(--mosque-black4);
   width: 100%;
   height: 100vh;
   z-index: 99999999;
@@ -574,7 +576,7 @@ h6 {
   top: 1px;
   right: 0;
   left: 0;
-  background-color: var(--mosque-black);
+  background-color: var(--mosque-black4);
   border-radius: 50%;
 }
 @keyframes preloaderCircle {
@@ -658,7 +660,7 @@ h6 {
   visibility: hidden;
   transform: translateY(15px);
   -webkit-transition: all 200ms linear;
-  background-color: var(--mosque-black);
+  background-color: var(--mosque-black4);
   transition: all 200ms linear;
 }
 .scroll-top--active {
@@ -1386,6 +1388,11 @@ h6 {
 .main-header__nav__list li + li {
   margin-left: 40px;
 }
+@media (min-width: 1200px) and (max-width: 1299px) {
+  .main-header__nav__list li + li {
+    margin-left: 30px;
+  }
+}
 .main-header__nav__list li a {
   display: inline-block;
   font-size: 18px;
@@ -1548,20 +1555,20 @@ h6 {
 }
 
 .mobile-menu__wrapper {
-  width: 320px;
+  width: 300px;
   height: 100%;
-  padding: 90px 15px 30px;
-  background-color: var(--mosque-black);
+  padding: 80px 15px 30px;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9999;
   opacity: 0;
   visibility: hidden;
   transform: translateX(-100%);
   transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, transform 500ms ease 0ms;
-  z-index: 9999;
   overflow-y: auto;
   overflow-y: scroll;
+  background-color: var(--mosque-black4);
   /* hide scrollbar but allow scrolling */
   -ms-overflow-style: none;
   /* IE and Edge */
@@ -1579,27 +1586,19 @@ h6 {
   transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms, transform 500ms ease 500ms;
 }
 .mobile-menu__close {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--mosque-white);
   position: absolute;
-  top: 15px;
-  right: 15px;
-  border-radius: 2px;
-  background-color: var(--mosque-primary);
+  top: 20px;
+  right: 20px;
   transition: all 500ms ease;
 }
 .mobile-menu__close:hover {
   color: var(--mosque-primary);
-  background-color: var(--mosque-white);
 }
 .mobile-menu__logo {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 .mobile-menu__main {
   margin: 0;
@@ -1609,12 +1608,12 @@ h6 {
 .mobile-menu__main li a {
   display: block;
   padding: 12px 0;
-  font-family: var(--mosque-font);
-  font-size: 16px;
+  font-size: 18px;
   color: var(--mosque-white);
   line-height: 1.5;
+  font-weight: 600;
   text-transform: capitalize;
-  border-bottom: 1px solid RGBA(var(--mosque-white-rgb), 0.1);
+  border-bottom: 1px solid RGBA(var(--mosque-white-rgb), 0.06);
   transition: all 500ms ease;
 }
 .mobile-menu__main li a:hover {
@@ -1623,14 +1622,6 @@ h6 {
 .mobile-menu__info {
   margin-top: 40px;
 }
-.mobile-menu__title {
-  margin-bottom: 15px;
-  font-size: 23px;
-  color: var(--mosque-white);
-  font-weight: 700;
-  text-transform: capitalize;
-  line-height: 1.5;
-}
 .mobile-menu__contact {
   margin-bottom: 40px;
 }
@@ -1638,6 +1629,7 @@ h6 {
   display: flex;
   align-items: center;
   gap: 10px;
+  font-family: var(--mosque-font-2);
   font-size: 16px;
   color: var(--mosque-white);
   font-weight: 500;
@@ -1661,6 +1653,7 @@ h6 {
   font-size: 14px;
   color: var(--mosque-white);
   text-align: center;
+  border-radius: 50%;
   background-color: var(--mosque-primary);
 }
 .mobile-menu .social-links a {
