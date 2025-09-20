@@ -1,14 +1,20 @@
 .donation-collection {
+  &__single + &__single {
+    margin-top: 30px;
+  }
+
   &__item {
     display: grid;
     grid-gap: 30px;
     align-items: center;
-    grid-template-columns: 183px auto;
+    grid-template-columns: 211px auto;
     padding: 30px 0px;
+    border-top: 1px dashed $mosque-border-color;
     border-bottom: 1px dashed $mosque-border-color;
 
-    &:first-child {
-      border-top: 1px dashed $mosque-border-color;
+    @include device(xsm) {
+      text-align: center;
+      grid-template-columns: auto;
     }
   }
 
@@ -28,6 +34,14 @@
     font-weight: 700;
     line-height: 1.375;
     text-transform: capitalize;
+
+    @media (max-width: 767px) {
+      font-size: 27px;
+    }
+
+    @media (max-width: 440px) {
+      font-size: 25px;
+    }
   }
 
   &__goal {
@@ -38,19 +52,35 @@
     line-height: 1.375;
     text-transform: capitalize;
 
+    @media (max-width: 440px) {
+      font-size: 23px;
+    }
+
     &__amount {
       font-family: $mosque-font-2;
       font-size: 22px;
       font-weight: 600;
       color: $mosque-primary;
+
+      @media (max-width: 440px) {
+        font-size: 20px;
+      }
     }
   }
 
   &__total {
     &__box {
       position: relative;
-      padding: 41px 40px 40px;
+      padding: 35px 30px 30px;
       @include bg(top center, cover);
+
+      @media (max-width: 575px) {
+        padding-top: 30px;
+      }
+
+      @media (min-width: 992px) and (max-width: 1199px) {
+        padding-top: 30px;
+      }
 
       &::before {
         content: "";
@@ -74,30 +104,60 @@
     &__inner {
       position: relative;
       z-index: 1;
-      text-align: center;
+    }
+
+    &__top {
+      display: grid;
+      grid-gap: 30px;
+      align-items: center;
+      grid-template-columns: auto 110px;
+      margin-bottom: 20px;
+
+      @media (max-width: 575px) {
+        margin-bottom: 40px;
+        grid-template-columns: auto;
+      }
+
+      @media (min-width: 992px) and (max-width: 1199px) {
+        margin-bottom: 40px;
+        grid-template-columns: auto;
+      }
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+      gap: 20px 10px;
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.375;
+      color: $mosque-white;
+      text-transform: capitalize;
+
+      @media (max-width: 390px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      @media (min-width: 992px) and (max-width: 1199px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     &__amount {
-      margin-bottom: 20px;
+      display: inline-block;
       font-family: $mosque-font-2;
-      font-size: 35px;
+      font-size: 30px;
       font-weight: 600;
       color: $mosque-white;
       line-height: 1;
     }
 
-    &__title {
-      margin-bottom: 15px;
-      font-size: 20px;
-      font-weight: 600;
-      line-height: 1.375;
-      color: $mosque-white;
-      text-transform: capitalize;
-    }
-
     &__donor {
-      margin-bottom: 30px;
-      font-size: 20px;
+      margin: 0px;
+      font-size: 18px;
       font-weight: 600;
       line-height: 1.375;
       color: $mosque-white;
@@ -106,9 +166,19 @@
       i {
         margin-right: 5px;
         position: relative;
-        top: 2px;
+        top: 3px;
         font-size: 18px;
         color: $mosque-secondary;
+      }
+    }
+
+    .mosque-btn {
+      &:hover {
+        color: $mosque-black;
+      }
+
+      &::before {
+        background-color: $mosque-white;
       }
     }
   }
@@ -116,7 +186,6 @@
   &__progress {
     width: 110px;
     height: 110px;
-    margin: 0px auto 35px;
     border-radius: 50%;
     background-color: $mosque-white;
 
@@ -141,7 +210,7 @@
       display: inline-flex;
       margin: 0px;
       font-family: $mosque-font-2;
-      font-size: 25px;
+      font-size: 22px;
       font-weight: 800;
       color: $mosque-black;
       line-height: 1;

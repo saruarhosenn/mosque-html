@@ -49,7 +49,7 @@
     &::after {
       content: "";
       @include positionFull;
-      background-color: RGBA($mosque-black-rgb, 0.7);
+      background-color: RGBA($mosque-primary-rgb, 0.9);
     }
   }
 
@@ -112,6 +112,14 @@
 
     .mosque-btn {
       margin-top: 30px;
+
+      &:hover {
+        color: $mosque-black;
+      }
+
+      &::before {
+        background-color: $mosque-white;
+      }
     }
   }
 }

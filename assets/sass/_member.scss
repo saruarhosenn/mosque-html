@@ -1,9 +1,8 @@
 .member-card {
   position: relative;
-  padding: 15px;
+  padding: 10px;
   border-radius: 999px 999px 0 0;
   background-color: $mosque-white;
-  border: 1px solid $mosque-border-color;
 
   &__image {
     position: relative;
@@ -73,7 +72,7 @@
   }
 
   &__info {
-    padding: 24px 23px 5px;
+    padding: 24px 20px 10px;
     position: relative;
     z-index: 1;
     display: flex;
@@ -154,12 +153,33 @@
   position: relative;
   background-color: $mosque-white;
 
+  &__bg {
+    position: relative;
+    @include positionFull;
+    @include bg(top center, cover);
+
+    &::after {
+      content: "";
+      @include positionFull;
+      background-color: RGB($mosque-black-rgb, 0.6);
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
   &__top {
     margin-bottom: 40px;
   }
 
   .section-title {
     margin: 0px;
+
+    &__title {
+      color: $mosque-white;
+    }
   }
 
   &__custom-navs {
