@@ -1,0 +1,123 @@
+.page-header {
+  position: relative;
+  padding-top: 269px;
+  padding-bottom: 120px;
+
+  @include device(md) {
+    padding-top: 267px;
+  }
+
+  @include device(sm) {
+    padding-top: 227px;
+  }
+
+  @media (max-width: 440px) {
+    padding-top: 201px;
+    padding-bottom: 100px;
+  }
+
+  &__bg {
+    position: relative;
+    @include positionFull;
+    @include bg(bottom, cover);
+
+    &::before {
+      content: "";
+      @include positionFull;
+      background-color: RGBA($mosque-black-rgb, 0.8);
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: $mosque-white;
+    font-weight: 700;
+    line-height: 1.375;
+    text-transform: capitalize;
+
+    @include device(md) {
+      font-size: 35px;
+    }
+
+    @media (max-width: 440px) {
+      font-size: 30px;
+    }
+  }
+}
+
+.mosque-breadcrumb {
+  position: relative;
+  margin: 0px;
+  padding-left: 21px;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-family: $mosque-font;
+    font-size: 20px;
+    color: $mosque-white;
+    font-weight: 400;
+    line-height: 1.333;
+    text-transform: capitalize;
+
+    @media (max-width: 440px) {
+      font-size: 18px;
+    }
+
+    &:first-child::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 50%;
+      left: -21px;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      background-color: $mosque-primary;
+    }
+
+    &:not(:last-child)::after {
+      content: "/";
+      position: relative;
+      top: 1px;
+      margin-left: 9px;
+      margin-right: 9px;
+      font-size: 18px;
+
+      @media (max-width: 440px) {
+        top: 0px;
+        font-size: 16px;
+      }
+    }
+
+    span,
+    a {
+      display: inline-flex;
+    }
+
+    &:not(:first-child) span {
+      color: $mosque-secondary;
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $mosque-secondary;
+      }
+
+      @include borderHover();
+    }
+  }
+}

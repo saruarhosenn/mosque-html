@@ -1,43 +1,14 @@
+@@include("components/__site-header.html", {"title": "তহবিলসমূহ"})
+@@include("components/__navigation.html")
+
+@@include("components/__mobile-menu.html")
+
+@@include("components/__page-header.html", {"title": "চলুন একসাথে পরিবর্তন আনি", "pageName": "তহবিলসমূহ"})
+
 <section class="donate section-space">
     <div class="container">
-        <div class="donate__top">
-            <div class="row gutter-y-40 align-items-end">
-                <div class="col-xl-9 col-lg-8">
-                    @@include("components/__section-title.html", {
-                    "extraClassName": "",
-                    "tagline": "অনুদান তহবিলসমূহ",
-                    "title": "চলুন একসাথে পরিবর্তন আনি",
-                    })
-                </div><!-- /.col-xl-9 -->
-                <div class="col-xl-3 col-lg-4">
-                    <div class="donate__custom-navs"></div>
-                </div><!-- /.col-xl-3 -->
-            </div><!-- /.row -->
-        </div><!-- /.donate__top -->
-        <div class="donate__carousel mosque-owl__carousel mosque-owl__carousel--basic-nav owl-carousel owl-theme"
-			data-owl-options='{
-			"items": 1,
-			"margin": 24,
-			"loop": true,
-			"smartSpeed": 700,
-			"nav": true,
-			"dots": false,
-            "navContainer": ".donate__custom-navs",
-			"navText": ["<i class=\"icon-arrow-left\"></i>","<i class=\"icon-arrow-right\"></i>"],
-			"autoplay": true,
-			"responsive": {
-				"0": {
-					"items": 1
-				},
-				"768": {
-					"items": 2
-				},
-				"1200": {
-					"items": 3
-				}
-			}
-		}'>
-            <div class="item">
+        <div class="row gutter-y-30">
+            <div class="col-xl-4 col-md-6">
                 <div class="donate__card">
                     <a href="#" class="donate__card__image">
                         <img src="assets/images/donate/donate-1.jpg" alt="donate">
@@ -48,8 +19,8 @@
                         <a href="#" class="mosque-btn">দান করুন</a>
                     </div><!-- /.donate__card__content -->
                 </div><!-- /.donate__card -->
-            </div><!-- /.item -->
-            <div class="item">
+            </div><!-- /.col-xl-4 -->
+            <div class="col-xl-4 col-md-6">
                 <div class="donate__card">
                     <a href="#" class="donate__card__image">
                         <img src="assets/images/donate/donate-2.jpg" alt="donate">
@@ -60,8 +31,8 @@
                         <a href="#" class="mosque-btn">দান করুন</a>
                     </div><!-- /.donate__card__content -->
                 </div><!-- /.donate__card -->
-            </div><!-- /.item -->
-            <div class="item">
+            </div><!-- /.col-xl-4 -->
+            <div class="col-xl-4 col-md-6">
                 <div class="donate__card">
                     <a href="#" class="donate__card__image">
                         <img src="assets/images/donate/donate-3.jpg" alt="donate">
@@ -72,8 +43,8 @@
                         <a href="#" class="mosque-btn">দান করুন</a>
                     </div><!-- /.donate__card__content -->
                 </div><!-- /.donate__card -->
-            </div><!-- /.item -->
-            <div class="item">
+            </div><!-- /.col-xl-4 -->
+            <div class="col-xl-4 col-md-6">
                 <div class="donate__card">
                     <a href="#" class="donate__card__image">
                         <img src="assets/images/donate/donate-1.jpg" alt="donate">
@@ -84,8 +55,8 @@
                         <a href="#" class="mosque-btn">দান করুন</a>
                     </div><!-- /.donate__card__content -->
                 </div><!-- /.donate__card -->
-            </div><!-- /.item -->
-            <div class="item">
+            </div><!-- /.col-xl-4 -->
+            <div class="col-xl-4 col-md-6">
                 <div class="donate__card">
                     <a href="#" class="donate__card__image">
                         <img src="assets/images/donate/donate-2.jpg" alt="donate">
@@ -96,8 +67,8 @@
                         <a href="#" class="mosque-btn">দান করুন</a>
                     </div><!-- /.donate__card__content -->
                 </div><!-- /.donate__card -->
-            </div><!-- /.item -->
-            <div class="item">
+            </div><!-- /.col-xl-4 -->
+            <div class="col-xl-4 col-md-6">
                 <div class="donate__card">
                     <a href="#" class="donate__card__image">
                         <img src="assets/images/donate/donate-3.jpg" alt="donate">
@@ -108,10 +79,13 @@
                         <a href="#" class="mosque-btn">দান করুন</a>
                     </div><!-- /.donate__card__content -->
                 </div><!-- /.donate__card -->
-            </div><!-- /.item -->
-        </div><!-- /.donate__carousel -->
-        <div class="donate__button">
-            <a href="donate.html" class="mosque-btn">তহবিলসমূহ</a>
-        </div><!-- /.donate__button -->
+            </div><!-- /.col-xl-4 -->
+        </div><!-- /.row -->
     </div><!-- /.container -->
 </section><!-- /.donate -->
+
+@@include("components/__cta.html", {
+    "extraClassName": "background-white2"
+})
+
+@@include("components/__footer.html")

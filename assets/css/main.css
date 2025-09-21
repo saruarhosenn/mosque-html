@@ -226,6 +226,22 @@ h6 {
   }
 }
 
+.background-white {
+  background-color: var(--mosque-white);
+}
+
+.background-white2 {
+  background-color: var(--mosque-white2);
+}
+
+.background-black {
+  background-color: var(--mosque-black);
+}
+
+.background-black2 {
+  background-color: var(--mosque-black2);
+}
+
 .container-fluid,
 .container {
   padding-left: 15px;
@@ -443,6 +459,71 @@ h6 {
 .social-links a:hover i {
   color: var(--mosque-black);
   animation: slideTop 500ms;
+}
+
+/* post pagination */
+.post-pagination {
+  list-style: none;
+  padding: 0px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.post-pagination__btn {
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  font-family: var(--mosque-font-2);
+  font-size: 18px;
+  color: var(--mosque-black);
+  text-align: center;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--mosque-border-color);
+  transition: all 400ms ease;
+}
+.post-pagination__btn--icon {
+  font-size: 12px;
+}
+.post-pagination__btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  background-color: var(--mosque-primary);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+  transition: -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+  transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+  transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1), -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+}
+.post-pagination__btn:hover::after {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.post-pagination__btn.active, .post-pagination__btn:hover {
+  color: var(--mosque-white);
+  border-color: var(--mosque-primary);
+}
+.post-pagination__btn.active::after, .post-pagination__btn:hover::after {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }
 
 /* owl carousel slider */
@@ -1555,7 +1636,7 @@ h6 {
 }
 
 .mobile-menu__wrapper {
-  width: 300px;
+  width: 320px;
   height: 100%;
   padding: 80px 15px 30px;
   position: fixed;
@@ -1662,6 +1743,142 @@ h6 {
 }
 .mobile-menu .social-links__icon {
   font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Page Header
+--------------------------------------------------------------*/
+.page-header {
+  position: relative;
+  padding-top: 269px;
+  padding-bottom: 120px;
+}
+@media (max-width: 991px) {
+  .page-header {
+    padding-top: 267px;
+  }
+}
+@media (max-width: 767px) {
+  .page-header {
+    padding-top: 227px;
+  }
+}
+@media (max-width: 440px) {
+  .page-header {
+    padding-top: 201px;
+    padding-bottom: 100px;
+  }
+}
+.page-header__bg {
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+.page-header__bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: RGBA(var(--mosque-black-rgb), 0.8);
+}
+.page-header .container {
+  position: relative;
+  z-index: 1;
+}
+.page-header__title {
+  margin-bottom: 10px;
+  font-size: 40px;
+  color: var(--mosque-white);
+  font-weight: 700;
+  line-height: 1.375;
+  text-transform: capitalize;
+}
+@media (max-width: 991px) {
+  .page-header__title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 440px) {
+  .page-header__title {
+    font-size: 30px;
+  }
+}
+
+.mosque-breadcrumb {
+  position: relative;
+  margin: 0px;
+  padding-left: 21px;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px 0;
+}
+.mosque-breadcrumb li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: var(--mosque-font);
+  font-size: 20px;
+  color: var(--mosque-white);
+  font-weight: 400;
+  line-height: 1.333;
+  text-transform: capitalize;
+}
+@media (max-width: 440px) {
+  .mosque-breadcrumb li {
+    font-size: 18px;
+  }
+}
+.mosque-breadcrumb li:first-child::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: -21px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: var(--mosque-primary);
+}
+.mosque-breadcrumb li:not(:last-child)::after {
+  content: "/";
+  position: relative;
+  top: 1px;
+  margin-left: 9px;
+  margin-right: 9px;
+  font-size: 18px;
+}
+@media (max-width: 440px) {
+  .mosque-breadcrumb li:not(:last-child)::after {
+    top: 0px;
+    font-size: 16px;
+  }
+}
+.mosque-breadcrumb li span,
+.mosque-breadcrumb li a {
+  display: inline-flex;
+}
+.mosque-breadcrumb li:not(:first-child) span {
+  color: var(--mosque-secondary);
+}
+.mosque-breadcrumb li a {
+  color: inherit;
+  background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+  transition: all 500ms ease;
+}
+.mosque-breadcrumb li a:hover {
+  color: var(--mosque-secondary);
+}
+.mosque-breadcrumb li a:hover {
+  background-size: 100% 1px;
 }
 
 /*--------------------------------------------------------------
@@ -2036,6 +2253,10 @@ h6 {
 }
 .donate__card__text {
   margin-bottom: 30px;
+}
+.donate__button {
+  margin-top: 60px;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -2978,9 +3199,6 @@ h6 {
 /*--------------------------------------------------------------
 # CTA
 --------------------------------------------------------------*/
-.cta {
-  background-color: var(--mosque-white2);
-}
 .cta__wrapper {
   position: relative;
   z-index: 1;
