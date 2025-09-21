@@ -2966,6 +2966,28 @@ h6 {
 .gallery {
   background-color: var(--mosque-white);
 }
+.gallery__filter__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+.gallery__filter__list li {
+  padding: 12px 30px 9px;
+}
+.gallery__filter__list li.active {
+  color: var(--mosque-black);
+}
+.gallery__filter__list li.active::before {
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  -moz-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
 .gallery__card {
   position: relative;
   overflow: hidden;
