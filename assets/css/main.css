@@ -3589,6 +3589,179 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact-info {
+  background-color: var(--mosque-white);
+}
+.contact-info__card {
+  text-align: center;
+  position: relative;
+  padding: 30px;
+  overflow: hidden;
+  border: 1px solid RGBA(var(--mosque-border-color-rgb), 0.5);
+}
+@media (max-width: 390px) {
+  .contact-info__card {
+    padding: 25px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .contact-info__card {
+    padding: 25px;
+  }
+}
+.contact-info__card::before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  background-color: var(--mosque-primary);
+}
+.contact-info__card::after {
+  content: "";
+  width: 0%;
+  height: 5px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background-color: var(--mosque-secondary);
+  transition: all 500ms ease;
+}
+.contact-info__card:hover::after {
+  width: 100%;
+  left: 0px;
+}
+.contact-info__card__icon {
+  display: inline-flex;
+  margin-bottom: 25px;
+  font-size: 50px;
+  color: var(--mosque-primary);
+}
+.contact-info__card:hover .contact-info__card__icon {
+  -webkit-animation-name: zoom-out-in;
+  animation-name: zoom-out-in;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.contact-info__card__title {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: var(--mosque-primary);
+  font-weight: 600;
+  line-height: 1.375;
+}
+.contact-info__card__link {
+  margin: 0px;
+  padding: 0px;
+  font-family: var(--mosque-font-2);
+  font-size: 18px;
+  color: var(--mosque-black);
+  font-weight: 400;
+  line-height: 1.375;
+}
+.contact-info__card__link a {
+  color: inherit;
+  background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+  transition: all 500ms ease;
+}
+.contact-info__card__link a:hover {
+  color: var(--mosque-primary);
+}
+.contact-info__card__link a:hover {
+  background-size: 100% 1px;
+}
+
+.contact {
+  background-color: var(--mosque-white);
+}
+.contact__form__group {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 25px;
+  margin: 0px;
+}
+@media (min-width: 576px) {
+  .contact__form__group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.contact__form__control {
+  border: none;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  padding: 0;
+  position: relative;
+}
+.contact__form__control--full {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.contact__form__control--btn {
+  text-align: center;
+}
+.contact__form input[type=text],
+.contact__form input[type=email],
+.contact__form input[type=search],
+.contact__form input[type=tel],
+.contact__form textarea {
+  display: block;
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  padding: 0px 25px;
+  font-family: var(--mosque-font);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--mosque-text);
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background-color: var(--mosque-white2);
+  transition: all 500ms ease;
+}
+.contact__form input[type=text]:hover, .contact__form input[type=text]:focus,
+.contact__form input[type=email]:hover,
+.contact__form input[type=email]:focus,
+.contact__form input[type=search]:hover,
+.contact__form input[type=search]:focus,
+.contact__form input[type=tel]:hover,
+.contact__form input[type=tel]:focus,
+.contact__form textarea:hover,
+.contact__form textarea:focus {
+  color: var(--mosque-black);
+  border-color: var(--mosque-primary);
+}
+.contact__form textarea {
+  height: 200px;
+  padding-top: 10px;
+}
+
+.contact-map {
+  position: relative;
+  background-color: var(--mosque-white);
+}
+.contact-map .google-map {
+  overflow: hidden;
+  background-color: var(--mosque-black);
+}
+.contact-map iframe {
+  width: 100%;
+  height: 400px;
+  display: block;
+  border: none;
+  position: relative;
+  mix-blend-mode: luminosity;
+}
+
+/*--------------------------------------------------------------
 # 404 Error
 --------------------------------------------------------------*/
 .error-404 {
@@ -3605,10 +3778,15 @@ h6 {
 }
 .error-404__title {
   margin-bottom: 15px;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1.375;
   text-transform: capitalize;
+}
+@media (max-width: 575px) {
+  .error-404__title {
+    font-size: 25px;
+  }
 }
 .error-404__text {
   margin: 0 auto 32px;

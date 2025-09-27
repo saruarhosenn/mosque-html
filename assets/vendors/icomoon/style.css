@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?d2asj0');
-  src:  url('fonts/icomoon.eot?d2asj0#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?d2asj0') format('truetype'),
-    url('fonts/icomoon.woff?d2asj0') format('woff'),
-    url('fonts/icomoon.svg?d2asj0#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?jhvy7o');
+  src:  url('fonts/icomoon.eot?jhvy7o#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?jhvy7o') format('truetype'),
+    url('fonts/icomoon.woff?jhvy7o') format('woff'),
+    url('fonts/icomoon.svg?jhvy7o#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -35,16 +35,16 @@
   content: "\e907";
 }
 .icon-fasting:before {
-  content: "\e908";
-}
-.icon-prayer:before {
   content: "\e909";
 }
+.icon-prayer:before {
+  content: "\e90b";
+}
 .icon-al-quran:before {
-  content: "\e90a";
+  content: "\e910";
 }
 .icon-kaaba:before {
-  content: "\e90b";
+  content: "\e911";
 }
 .icon-arabesque-motif:before {
   content: "\e904";
@@ -81,4 +81,13 @@
 }
 .icon-tree:before {
   content: "\e90c";
+}
+.icon-envelope-2:before {
+  content: "\e908";
+}
+.icon-telephone-2:before {
+  content: "\e90a";
+}
+.icon-location:before {
+  content: "\e90f";
 }

@@ -14,10 +14,14 @@
 
   &__title {
     margin-bottom: 15px;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 1.375;
     text-transform: capitalize;
+
+    @include device(xsm) {
+      font-size: 25px;
+    }
   }
 
   &__text {
