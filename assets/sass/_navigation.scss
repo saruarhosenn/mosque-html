@@ -21,6 +21,12 @@
     display: none;
   }
 
+  .container {
+    @include devices(xl) {
+      max-width: 1400px;
+    }
+  }
+
   &__inner {
     display: flex;
     align-items: center;
@@ -136,6 +142,12 @@
 }
 
 .main-header {
+  .container {
+    @include devices(xl) {
+      max-width: 1400px;
+    }
+  }
+
   &__inner {
     padding: 30px 0px;
     display: flex;
@@ -168,7 +180,11 @@
         margin-left: 40px;
 
         @media (min-width: 1200px) and (max-width: 1299px) {
-          margin-left: 30px;
+          margin-left: 35px;
+        }
+
+        @media (min-width: 1300px) and (max-width: 1399px) {
+          margin-left: 35px;
         }
       }
 
@@ -278,6 +294,10 @@
 
     @include device(sm) {
       display: none;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1299px) {
+      margin-left: 25px;
     }
   }
 }

@@ -1338,6 +1338,11 @@ h6 {
     display: none;
   }
 }
+@media (min-width: 1200px) {
+  .topbar .container {
+    max-width: 1400px;
+  }
+}
 .topbar__inner {
   display: flex;
   align-items: center;
@@ -1443,6 +1448,11 @@ h6 {
   color: var(--mosque-secondary);
 }
 
+@media (min-width: 1200px) {
+  .main-header .container {
+    max-width: 1400px;
+  }
+}
 .main-header__inner {
   padding: 30px 0px;
   display: flex;
@@ -1471,7 +1481,12 @@ h6 {
 }
 @media (min-width: 1200px) and (max-width: 1299px) {
   .main-header__nav__list li + li {
-    margin-left: 30px;
+    margin-left: 35px;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1399px) {
+  .main-header__nav__list li + li {
+    margin-left: 35px;
   }
 }
 .main-header__nav__list li a {
@@ -1572,6 +1587,11 @@ h6 {
 @media (max-width: 767px) {
   .main-header .mosque-btn {
     display: none;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1299px) {
+  .main-header .mosque-btn {
+    margin-left: 25px;
   }
 }
 
@@ -1692,7 +1712,7 @@ h6 {
   font-size: 18px;
   color: var(--mosque-white);
   line-height: 1.5;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: capitalize;
   border-bottom: 1px solid RGBA(var(--mosque-white-rgb), 0.06);
   transition: all 500ms ease;
@@ -3566,6 +3586,32 @@ h6 {
 }
 .cta__form .mosque-btn::before {
   background-color: var(--mosque-white);
+}
+
+/*--------------------------------------------------------------
+# 404 Error
+--------------------------------------------------------------*/
+.error-404 {
+  background-color: var(--mosque-white);
+}
+.error-404__content {
+  text-align: center;
+}
+.error-404 .error-404__image {
+  margin-bottom: 35px;
+  max-width: 100%;
+  height: auto;
+  animation: moveX 2s linear infinite;
+}
+.error-404__title {
+  margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.375;
+  text-transform: capitalize;
+}
+.error-404__text {
+  margin: 0 auto 32px;
 }
 
 /*--------------------------------------------------------------

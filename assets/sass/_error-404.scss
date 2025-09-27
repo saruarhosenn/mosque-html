@@ -1,0 +1,26 @@
+.error-404 {
+  background-color: $mosque-white;
+
+  &__content {
+    text-align: center;
+  }
+
+  .error-404__image {
+    margin-bottom: 35px;
+    max-width: 100%;
+    height: auto;
+    animation: moveX 2s linear infinite;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.375;
+    text-transform: capitalize;
+  }
+
+  &__text {
+    margin: 0 auto 32px;
+  }
+}
